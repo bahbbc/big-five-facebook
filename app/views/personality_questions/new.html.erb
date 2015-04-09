@@ -1,0 +1,1030 @@
+<div class="jumbotron">
+  <div class="container">
+    <h1> Teste de Personalidade </h1>
+  </div>
+</div>
+<div class="container">
+  <h3>Abaixo encontram-se um número de características que podem ou não descrever-te.
+  <br>
+  Por exemplo, Você acha que é uma pessoa que <strong>gosta de estar com os outros?</strong>
+  Escolha o número que corresponde ao grau em que acreditas que a frase te caracteriza.
+  Não existem respostas certas nem erradas. Por favor responda com sineridade, com o modo que mais te representa!</h3>
+  <div class="row">
+    <%= simple_form_for @personality_questions, url: personality_questions_path do |f| %>
+      <div class="col-xs-4 col-md-12">
+        <%= f.label :one_speaker, "1 - É falador(a)."%>
+          <label class="btn btn-default">
+            <%= f.radio_button :one_speaker, 1 %>
+            <%= 1 %>
+          </label>
+          <label class="btn btn-default">
+            <%= f.radio_button :one_speaker, 2 %>
+            <%= 2 %>
+          </label>
+          <label class="btn btn-default">
+            <%= f.radio_button :one_speaker, 3 %>
+            <%= 3 %>
+          </label>
+          <label class="btn btn-default">
+            <%= f.radio_button :one_speaker, 4 %>
+            <%= 4 %>
+          </label>
+          <label class="btn btn-default">
+            <%= f.radio_button :one_speaker, 5 %>
+            <%= 5 %>
+          </label>
+      </div>
+      <div class="col-xs-4 col-md-12">
+        <%= f.label :two_show_defects, "2 - Tende a encontrar defeitos nos outros."%>
+          <label class="btn btn-default">
+            <%= f.radio_button :two_show_defects, 1 %>
+            <%= 1 %>
+          </label>
+          <label class="btn btn-default">
+            <%= f.radio_button :two_show_defects, 2 %>
+            <%= 2 %>
+          </label>
+          <label class="btn btn-default">
+            <%= f.radio_button :two_show_defects, 3 %>
+            <%= 3 %>
+          </label>
+          <label class="btn btn-default">
+            <%= f.radio_button :two_show_defects, 4 %>
+            <%= 4 %>
+          </label>
+          <label class="btn btn-default">
+            <%= f.radio_button :two_show_defects, 5 %>
+            <%= 5 %>
+          </label>
+      </div>
+      <div class="col-xs-4 col-md-12">
+        <%= f.label :three_exaustive_work, "3 - Faz um trabalho exaustivo."%>
+          <label class="btn btn-default">
+            <%= f.radio_button :three_exaustive_work, 1 %>
+            <%= 1 %>
+          </label>
+          <label class="btn btn-default">
+            <%= f.radio_button :three_exaustive_work, 2 %>
+            <%= 2 %>
+          </label>
+          <label class="btn btn-default">
+            <%= f.radio_button :three_exaustive_work, 3 %>
+            <%= 3 %>
+          </label>
+          <label class="btn btn-default">
+            <%= f.radio_button :three_exaustive_work, 4 %>
+            <%= 4 %>
+          </label>
+          <label class="btn btn-default">
+            <%= f.radio_button :three_exaustive_work, 5 %>
+            <%= 5 %>
+          </label>
+      </div>
+      <div class="col-xs-4 col-md-12">
+        <%= f.label :four_sad, "4 - É deprimido(a), triste."%>
+          <label class="btn btn-default">
+            <%= f.radio_button :four_sad, 1 %>
+            <%= 1 %>
+          </label>
+          <label class="btn btn-default">
+            <%= f.radio_button :four_sad, 2 %>
+            <%= 2 %>
+          </label>
+          <label class="btn btn-default">
+            <%= f.radio_button :four_sad, 3 %>
+            <%= 3 %>
+          </label>
+          <label class="btn btn-default">
+            <%= f.radio_button :four_sad, 4 %>
+            <%= 4 %>
+          </label>
+          <label class="btn btn-default">
+            <%= f.radio_button :four_sad, 5 %>
+            <%= 5 %>
+          </label>
+      </div>
+      <div class="col-xs-4 col-md-12">
+        <%= f.label :five_original, "5 - É original, tem sempre novas ideias"%>
+          <label class="btn btn-default">
+            <%= f.radio_button :five_original, 1 %>
+            <%= 1 %>
+          </label>
+          <label class="btn btn-default">
+            <%= f.radio_button :five_original, 2 %>
+            <%= 2 %>
+          </label>
+          <label class="btn btn-default">
+            <%= f.radio_button :five_original, 3 %>
+            <%= 3 %>
+          </label>
+          <label class="btn btn-default">
+            <%= f.radio_button :five_original, 4 %>
+            <%= 4 %>
+          </label>
+          <label class="btn btn-default">
+            <%= f.radio_button :five_original, 5 %>
+            <%= 5 %>
+          </label>
+      </div>
+      <div class="col-xs-4 col-md-12">
+        <%= f.label :six_quiet, "6 - É reservado(a)"%>
+          <label class="btn btn-default">
+            <%= f.radio_button :six_quiet, 1 %>
+            <%= 1 %>
+          </label>
+          <label class="btn btn-default">
+            <%= f.radio_button :six_quiet, 2 %>
+            <%= 2 %>
+          </label>
+          <label class="btn btn-default">
+            <%= f.radio_button :six_quiet, 3 %>
+            <%= 3 %>
+          </label>
+          <label class="btn btn-default">
+            <%= f.radio_button :six_quiet, 4 %>
+            <%= 4 %>
+          </label>
+          <label class="btn btn-default">
+            <%= f.radio_button :six_quiet, 5 %>
+            <%= 5 %>
+          </label>
+      </div>
+      <div class="col-xs-4 col-md-12">
+        <%= f.label :seven_prestative, "7 - É prestável e não inveja os outros"%>
+          <label class="btn btn-default">
+            <%= f.radio_button :seven_prestative, 1 %>
+            <%= 1 %>
+          </label>
+          <label class="btn btn-default">
+            <%= f.radio_button :seven_prestative, 2 %>
+            <%= 2 %>
+          </label>
+          <label class="btn btn-default">
+            <%= f.radio_button :seven_prestative, 3 %>
+            <%= 3 %>
+          </label>
+          <label class="btn btn-default">
+            <%= f.radio_button :seven_prestative, 4 %>
+            <%= 4 %>
+          </label>
+          <label class="btn btn-default">
+            <%= f.radio_button :seven_prestative, 5 %>
+            <%= 5 %>
+          </label>
+      </div>
+      <div class="col-xs-4 col-md-12">
+        <%= f.label :eight_careless, "8 - Por vezes pode ser um pouco descuidado(a)."%>
+          <label class="btn btn-default">
+            <%= f.radio_button :eight_careless, 1 %>
+            <%= 1 %>
+          </label>
+          <label class="btn btn-default">
+            <%= f.radio_button :eight_careless, 2 %>
+            <%= 2 %>
+          </label>
+          <label class="btn btn-default">
+            <%= f.radio_button :eight_careless, 3 %>
+            <%= 3 %>
+          </label>
+          <label class="btn btn-default">
+            <%= f.radio_button :eight_careless, 4 %>
+            <%= 4 %>
+          </label>
+          <label class="btn btn-default">
+            <%= f.radio_button :eight_careless, 5 %>
+            <%= 5 %>
+          </label>
+      </div>
+      <div class="col-xs-4 col-md-12">
+        <%= f.label :nine_stressless, "9 - É relaxado(a), lida bem com o stress."%>
+          <label class="btn btn-default">
+            <%= f.radio_button :nine_stressless, 1 %>
+            <%= 1 %>
+          </label>
+          <label class="btn btn-default">
+            <%= f.radio_button :nine_stressless, 2 %>
+            <%= 2 %>
+          </label>
+          <label class="btn btn-default">
+            <%= f.radio_button :nine_stressless, 3 %>
+            <%= 3 %>
+          </label>
+          <label class="btn btn-default">
+            <%= f.radio_button :nine_stressless, 4 %>
+            <%= 4 %>
+          </label>
+          <label class="btn btn-default">
+            <%= f.radio_button :nine_stressless, 5 %>
+            <%= 5 %>
+          </label>
+      </div>
+      <div class="col-xs-4 col-md-12">
+        <%= f.label :ten_curiosity, "10 - Tem curiosidade em relação a várias coisas."%>
+          <label class="btn btn-default">
+            <%= f.radio_button :ten_curiosity, 1 %>
+            <%= 1 %>
+          </label>
+          <label class="btn btn-default">
+            <%= f.radio_button :ten_curiosity, 2 %>
+            <%= 2 %>
+          </label>
+          <label class="btn btn-default">
+            <%= f.radio_button :ten_curiosity, 3 %>
+            <%= 3 %>
+          </label>
+          <label class="btn btn-default">
+            <%= f.radio_button :ten_curiosity, 4 %>
+            <%= 4 %>
+          </label>
+          <label class="btn btn-default">
+            <%= f.radio_button :ten_curiosity, 5 %>
+            <%= 5 %>
+          </label>
+      </div>
+      <div class="col-xs-4 col-md-12">
+        <%= f.label :eleven_energy, "11 - Tem muita energia."%>
+          <label class="btn btn-default">
+            <%= f.radio_button :eleven_energy, 1 %>
+            <%= 1 %>
+          </label>
+          <label class="btn btn-default">
+            <%= f.radio_button :eleven_energy, 2 %>
+            <%= 2 %>
+          </label>
+          <label class="btn btn-default">
+            <%= f.radio_button :eleven_energy, 3 %>
+            <%= 3 %>
+          </label>
+          <label class="btn btn-default">
+            <%= f.radio_button :eleven_energy, 4 %>
+            <%= 4 %>
+          </label>
+          <label class="btn btn-default">
+            <%= f.radio_button :eleven_energy, 5 %>
+            <%= 5 %>
+          </label>
+      </div>
+      <div class="col-xs-4 col-md-12">
+        <%= f.label :twelve_fighter, "12 - Inicia muitas disputas com os outros."%>
+          <label class="btn btn-default">
+            <%= f.radio_button :twelve_fighter, 1 %>
+            <%= 1 %>
+          </label>
+          <label class="btn btn-default">
+            <%= f.radio_button :twelve_fighter, 2 %>
+            <%= 2 %>
+          </label>
+          <label class="btn btn-default">
+            <%= f.radio_button :twelve_fighter, 3 %>
+            <%= 3 %>
+          </label>
+          <label class="btn btn-default">
+            <%= f.radio_button :twelve_fighter, 4 %>
+            <%= 4 %>
+          </label>
+          <label class="btn btn-default">
+            <%= f.radio_button :twelve_fighter, 5 %>
+            <%= 5 %>
+          </label>
+      </div>
+      <div class="col-xs-4 col-md-12">
+        <%= f.label :thirteen_confidence_worker, "13 - É um trabalhador(a) de confiança."%>
+          <label class="btn btn-default">
+            <%= f.radio_button :thirteen_confidence_worker, 1 %>
+            <%= 1 %>
+          </label>
+          <label class="btn btn-default">
+            <%= f.radio_button :thirteen_confidence_worker, 2 %>
+            <%= 2 %>
+          </label>
+          <label class="btn btn-default">
+            <%= f.radio_button :thirteen_confidence_worker, 3 %>
+            <%= 3 %>
+          </label>
+          <label class="btn btn-default">
+            <%= f.radio_button :thirteen_confidence_worker, 4 %>
+            <%= 4 %>
+          </label>
+          <label class="btn btn-default">
+            <%= f.radio_button :thirteen_confidence_worker, 5 %>
+            <%= 5 %>
+          </label>
+      </div>
+      <div class="col-xs-4 col-md-12">
+        <%= f.label :fourteen_tense, "14 - Pode ficar tenso."%>
+          <label class="btn btn-default">
+            <%= f.radio_button :fourteen_tense, 1 %>
+            <%= 1 %>
+          </label>
+          <label class="btn btn-default">
+            <%= f.radio_button :fourteen_tense, 2 %>
+            <%= 2 %>
+          </label>
+          <label class="btn btn-default">
+            <%= f.radio_button :fourteen_tense, 3 %>
+            <%= 3 %>
+          </label>
+          <label class="btn btn-default">
+            <%= f.radio_button :fourteen_tense, 4 %>
+            <%= 4 %>
+          </label>
+          <label class="btn btn-default">
+            <%= f.radio_button :fourteen_tense, 5 %>
+            <%= 5 %>
+          </label>
+      </div>
+      <div class="col-xs-4 col-md-12">
+        <%= f.label :fifteen_thinker, "15 - É engenhoso(a), um(a) pensador(a) profundo."%>
+          <label class="btn btn-default">
+            <%= f.radio_button :fifteen_thinker, 1 %>
+            <%= 1 %>
+          </label>
+          <label class="btn btn-default">
+            <%= f.radio_button :fifteen_thinker, 2 %>
+            <%= 2 %>
+          </label>
+          <label class="btn btn-default">
+            <%= f.radio_button :fifteen_thinker, 3 %>
+            <%= 3 %>
+          </label>
+          <label class="btn btn-default">
+            <%= f.radio_button :fifteen_thinker, 4 %>
+            <%= 4 %>
+          </label>
+          <label class="btn btn-default">
+            <%= f.radio_button :fifteen_thinker, 5 %>
+            <%= 5 %>
+          </label>
+      </div>
+      <div class="col-xs-4 col-md-12">
+        <%= f.label :sixteen_enthusiastic, "16 - Gera muito entusiasmo."%>
+          <label class="btn btn-default">
+            <%= f.radio_button :sixteen_enthusiastic, 1 %>
+            <%= 1 %>
+          </label>
+          <label class="btn btn-default">
+            <%= f.radio_button :sixteen_enthusiastic, 2 %>
+            <%= 2 %>
+          </label>
+          <label class="btn btn-default">
+            <%= f.radio_button :sixteen_enthusiastic, 3 %>
+            <%= 3 %>
+          </label>
+          <label class="btn btn-default">
+            <%= f.radio_button :sixteen_enthusiastic, 4 %>
+            <%= 4 %>
+          </label>
+          <label class="btn btn-default">
+            <%= f.radio_button :sixteen_enthusiastic, 5 %>
+            <%= 5 %>
+          </label>
+      </div>
+      <div class="col-xs-4 col-md-12">
+        <%= f.label :seventeen_forgive, "17 - Perdoa com facilidade"%>
+          <label class="btn btn-default">
+            <%= f.radio_button :seventeen_forgive, 1 %>
+            <%= 1 %>
+          </label>
+          <label class="btn btn-default">
+            <%= f.radio_button :seventeen_forgive, 2 %>
+            <%= 2 %>
+          </label>
+          <label class="btn btn-default">
+            <%= f.radio_button :seventeen_forgive, 3 %>
+            <%= 3 %>
+          </label>
+          <label class="btn btn-default">
+            <%= f.radio_button :seventeen_forgive, 4 %>
+            <%= 4 %>
+          </label>
+          <label class="btn btn-default">
+            <%= f.radio_button :seventeen_forgive, 5 %>
+            <%= 5 %>
+          </label>
+      </div>
+      <div class="col-xs-4 col-md-12">
+        <%= f.label :eighteen_unorganized, "18 - Tende a ser desorganizado(a)."%>
+          <label class="btn btn-default">
+            <%= f.radio_button :eighteen_unorganized, 1 %>
+            <%= 1 %>
+          </label>
+          <label class="btn btn-default">
+            <%= f.radio_button :eighteen_unorganized, 2 %>
+            <%= 2 %>
+          </label>
+          <label class="btn btn-default">
+            <%= f.radio_button :eighteen_unorganized, 3 %>
+            <%= 3 %>
+          </label>
+          <label class="btn btn-default">
+            <%= f.radio_button :eighteen_unorganized, 4 %>
+            <%= 4 %>
+          </label>
+          <label class="btn btn-default">
+            <%= f.radio_button :eighteen_unorganized, 5 %>
+            <%= 5 %>
+          </label>
+      </div>
+      <div class="col-xs-4 col-md-12">
+        <%= f.label :ninteen_concerned, "19 - Se preocupa muito."%>
+          <label class="btn btn-default">
+            <%= f.radio_button :ninteen_concerned, 1 %>
+            <%= 1 %>
+          </label>
+          <label class="btn btn-default">
+            <%= f.radio_button :ninteen_concerned, 2 %>
+            <%= 2 %>
+          </label>
+          <label class="btn btn-default">
+            <%= f.radio_button :ninteen_concerned, 3 %>
+            <%= 3 %>
+          </label>
+          <label class="btn btn-default">
+            <%= f.radio_button :ninteen_concerned, 4 %>
+            <%= 4 %>
+          </label>
+          <label class="btn btn-default">
+            <%= f.radio_button :ninteen_concerned, 5 %>
+            <%= 5 %>
+          </label>
+      </div>
+      <div class="col-xs-4 col-md-12">
+        <%= f.label :twenty_imaginative, "20 - Tem uma imaginação ativa."%>
+          <label class="btn btn-default">
+            <%= f.radio_button :twenty_imaginative, 1 %>
+            <%= 1 %>
+          </label>
+          <label class="btn btn-default">
+            <%= f.radio_button :twenty_imaginative, 2 %>
+            <%= 2 %>
+          </label>
+          <label class="btn btn-default">
+            <%= f.radio_button :twenty_imaginative, 3 %>
+            <%= 3 %>
+          </label>
+          <label class="btn btn-default">
+            <%= f.radio_button :twenty_imaginative, 4 %>
+            <%= 4 %>
+          </label>
+          <label class="btn btn-default">
+            <%= f.radio_button :twenty_imaginative, 5 %>
+            <%= 5 %>
+          </label>
+      </div>
+      <div class="col-xs-4 col-md-12">
+        <%= f.label :twenty_one_calm, "21 - Tende a ser sossegado(a)."%>
+          <label class="btn btn-default">
+            <%= f.radio_button :twenty_one_calm, 1 %>
+            <%= 1 %>
+          </label>
+          <label class="btn btn-default">
+            <%= f.radio_button :twenty_one_calm, 2 %>
+            <%= 2 %>
+          </label>
+          <label class="btn btn-default">
+            <%= f.radio_button :twenty_one_calm, 3 %>
+            <%= 3 %>
+          </label>
+          <label class="btn btn-default">
+            <%= f.radio_button :twenty_one_calm, 4 %>
+            <%= 4 %>
+          </label>
+          <label class="btn btn-default">
+            <%= f.radio_button :twenty_one_calm, 5 %>
+            <%= 5 %>
+          </label>
+      </div>
+      <div class="col-xs-4 col-md-12">
+        <%= f.label :twenty_two_others_trust, "22 - Geralmente é de confiança."%>
+          <label class="btn btn-default">
+            <%= f.radio_button :twenty_two_others_trust, 1 %>
+            <%= 1 %>
+          </label>
+          <label class="btn btn-default">
+            <%= f.radio_button :twenty_two_others_trust, 2 %>
+            <%= 2 %>
+          </label>
+          <label class="btn btn-default">
+            <%= f.radio_button :twenty_two_others_trust, 3 %>
+            <%= 3 %>
+          </label>
+          <label class="btn btn-default">
+            <%= f.radio_button :twenty_two_others_trust, 4 %>
+            <%= 4 %>
+          </label>
+          <label class="btn btn-default">
+            <%= f.radio_button :twenty_two_others_trust, 5 %>
+            <%= 5 %>
+          </label>
+      </div>
+      <div class="col-xs-4 col-md-12">
+        <%= f.label :twenty_three_lazy, "23 - Tende a ser preguiçoso(a)."%>
+          <label class="btn btn-default">
+            <%= f.radio_button :twenty_three_lazy, 1 %>
+            <%= 1 %>
+          </label>
+          <label class="btn btn-default">
+            <%= f.radio_button :twenty_three_lazy, 2 %>
+            <%= 2 %>
+          </label>
+          <label class="btn btn-default">
+            <%= f.radio_button :twenty_three_lazy, 3 %>
+            <%= 3 %>
+          </label>
+          <label class="btn btn-default">
+            <%= f.radio_button :twenty_three_lazy, 4 %>
+            <%= 4 %>
+          </label>
+          <label class="btn btn-default">
+            <%= f.radio_button :twenty_three_lazy, 5 %>
+            <%= 5 %>
+          </label>
+      </div>
+      <div class="col-xs-4 col-md-12">
+        <%= f.label :twenty_four_stable, "24 - É emocionalmente estável, se aborrece com facilidade"%>
+          <label class="btn btn-default">
+            <%= f.radio_button :twenty_four_stable, 1 %>
+            <%= 1 %>
+          </label>
+          <label class="btn btn-default">
+            <%= f.radio_button :twenty_four_stable, 2 %>
+            <%= 2 %>
+          </label>
+          <label class="btn btn-default">
+            <%= f.radio_button :twenty_four_stable, 3 %>
+            <%= 3 %>
+          </label>
+          <label class="btn btn-default">
+            <%= f.radio_button :twenty_four_stable, 4 %>
+            <%= 4 %>
+          </label>
+          <label class="btn btn-default">
+            <%= f.radio_button :twenty_four_stable, 5 %>
+            <%= 5 %>
+          </label>
+      </div>
+      <div class="col-xs-4 col-md-12">
+        <%= f.label :twenty_five_inventive, "25 - É inventivo(a)."%>
+          <label class="btn btn-default">
+            <%= f.radio_button :twenty_five_inventive, 1 %>
+            <%= 1 %>
+          </label>
+          <label class="btn btn-default">
+            <%= f.radio_button :twenty_five_inventive, 2 %>
+            <%= 2 %>
+          </label>
+          <label class="btn btn-default">
+            <%= f.radio_button :twenty_five_inventive, 3 %>
+            <%= 3 %>
+          </label>
+          <label class="btn btn-default">
+            <%= f.radio_button :twenty_five_inventive, 4 %>
+            <%= 4 %>
+          </label>
+          <label class="btn btn-default">
+            <%= f.radio_button :twenty_five_inventive, 5 %>
+            <%= 5 %>
+          </label>
+      </div>
+      <div class="col-xs-4 col-md-12">
+        <%= f.label :twenty_six_assertive, "26 - Tem uma personalidade assertiva."%>
+          <label class="btn btn-default">
+            <%= f.radio_button :twenty_six_assertive, 1 %>
+            <%= 1 %>
+          </label>
+          <label class="btn btn-default">
+            <%= f.radio_button :twenty_six_assertive, 2 %>
+            <%= 2 %>
+          </label>
+          <label class="btn btn-default">
+            <%= f.radio_button :twenty_six_assertive, 3 %>
+            <%= 3 %>
+          </label>
+          <label class="btn btn-default">
+            <%= f.radio_button :twenty_six_assertive, 4 %>
+            <%= 4 %>
+          </label>
+          <label class="btn btn-default">
+            <%= f.radio_button :twenty_six_assertive, 5 %>
+            <%= 5 %>
+          </label>
+      </div>
+      <div class="col-xs-4 col-md-12">
+        <%= f.label :twenty_seven_cold, "27 - Pode ser frio(a) e indiferente."%>
+          <label class="btn btn-default">
+            <%= f.radio_button :twenty_seven_cold, 1 %>
+            <%= 1 %>
+          </label>
+          <label class="btn btn-default">
+            <%= f.radio_button :twenty_seven_cold, 2 %>
+            <%= 2 %>
+          </label>
+          <label class="btn btn-default">
+            <%= f.radio_button :twenty_seven_cold, 3 %>
+            <%= 3 %>
+          </label>
+          <label class="btn btn-default">
+            <%= f.radio_button :twenty_seven_cold, 4 %>
+            <%= 4 %>
+          </label>
+          <label class="btn btn-default">
+            <%= f.radio_button :twenty_seven_cold, 5 %>
+            <%= 5 %>
+          </label>
+      </div>
+      <div class="col-xs-4 col-md-12">
+        <%= f.label :twenty_eight_perseverant, "28 - É perseverante até a tarefa ser concluída."%>
+          <label class="btn btn-default">
+            <%= f.radio_button :twenty_eight_perseverant, 1 %>
+            <%= 1 %>
+          </label>
+          <label class="btn btn-default">
+            <%= f.radio_button :twenty_eight_perseverant, 2 %>
+            <%= 2 %>
+          </label>
+          <label class="btn btn-default">
+            <%= f.radio_button :twenty_eight_perseverant, 3 %>
+            <%= 3 %>
+          </label>
+          <label class="btn btn-default">
+            <%= f.radio_button :twenty_eight_perseverant, 4 %>
+            <%= 4 %>
+          </label>
+          <label class="btn btn-default">
+            <%= f.radio_button :twenty_eight_perseverant, 5 %>
+            <%= 5 %>
+          </label>
+      </div>
+      <div class="col-xs-4 col-md-12">
+        <%= f.label :twenty_nine_instable, "29 - Pode ter um humor instável."%>
+          <label class="btn btn-default">
+            <%= f.radio_button :twenty_nine_instable, 1 %>
+            <%= 1 %>
+          </label>
+          <label class="btn btn-default">
+            <%= f.radio_button :twenty_nine_instable, 2 %>
+            <%= 2 %>
+          </label>
+          <label class="btn btn-default">
+            <%= f.radio_button :twenty_nine_instable, 3 %>
+            <%= 3 %>
+          </label>
+          <label class="btn btn-default">
+            <%= f.radio_button :twenty_nine_instable, 4 %>
+            <%= 4 %>
+          </label>
+          <label class="btn btn-default">
+            <%= f.radio_button :twenty_nine_instable, 5 %>
+            <%= 5 %>
+          </label>
+      </div>
+      <div class="col-xs-4 col-md-12">
+        <%= f.label :thrty_experience, "30 - Valoriza experiências artisticas, estéticas."%>
+          <label class="btn btn-default">
+            <%= f.radio_button :thrty_experience, 1 %>
+            <%= 1 %>
+          </label>
+          <label class="btn btn-default">
+            <%= f.radio_button :thrty_experience, 2 %>
+            <%= 2 %>
+          </label>
+          <label class="btn btn-default">
+            <%= f.radio_button :thrty_experience, 3 %>
+            <%= 3 %>
+          </label>
+          <label class="btn btn-default">
+            <%= f.radio_button :thrty_experience, 4 %>
+            <%= 4 %>
+          </label>
+          <label class="btn btn-default">
+            <%= f.radio_button :thrty_experience, 5 %>
+            <%= 5 %>
+          </label>
+      </div>
+      <div class="col-xs-4 col-md-12">
+        <%= f.label :thirty_one_shy, "31 - Por vezes é tímido(a), inibido(a)."%>
+          <label class="btn btn-default">
+            <%= f.radio_button :thirty_one_shy, 1 %>
+            <%= 1 %>
+          </label>
+          <label class="btn btn-default">
+            <%= f.radio_button :thirty_one_shy, 2 %>
+            <%= 2 %>
+          </label>
+          <label class="btn btn-default">
+            <%= f.radio_button :thirty_one_shy, 3 %>
+            <%= 3 %>
+          </label>
+          <label class="btn btn-default">
+            <%= f.radio_button :thirty_one_shy, 4 %>
+            <%= 4 %>
+          </label>
+          <label class="btn btn-default">
+            <%= f.radio_button :thirty_one_shy, 5 %>
+            <%= 5 %>
+          </label>
+      </div>
+      <div class="col-xs-4 col-md-12">
+        <%= f.label :thirty_two_good, "32 - É atencioso(a) e bondoso(a) com quase todos."%>
+          <label class="btn btn-default">
+            <%= f.radio_button :thirty_two_good, 1 %>
+            <%= 1 %>
+          </label>
+          <label class="btn btn-default">
+            <%= f.radio_button :thirty_two_good, 2 %>
+            <%= 2 %>
+          </label>
+          <label class="btn btn-default">
+            <%= f.radio_button :thirty_two_good, 3 %>
+            <%= 3 %>
+          </label>
+          <label class="btn btn-default">
+            <%= f.radio_button :thirty_two_good, 4 %>
+            <%= 4 %>
+          </label>
+          <label class="btn btn-default">
+            <%= f.radio_button :thirty_two_good, 5 %>
+            <%= 5 %>
+          </label>
+      </div>
+      <div class="col-xs-4 col-md-12">
+        <%= f.label :thirty_three_eficient, "33 - Faz as coisas de modo eficaz."%>
+          <label class="btn btn-default">
+            <%= f.radio_button :thirty_three_eficient, 1 %>
+            <%= 1 %>
+          </label>
+          <label class="btn btn-default">
+            <%= f.radio_button :thirty_three_eficient, 2 %>
+            <%= 2 %>
+          </label>
+          <label class="btn btn-default">
+            <%= f.radio_button :thirty_three_eficient, 3 %>
+            <%= 3 %>
+          </label>
+          <label class="btn btn-default">
+            <%= f.radio_button :thirty_three_eficient, 4 %>
+            <%= 4 %>
+          </label>
+          <label class="btn btn-default">
+            <%= f.radio_button :thirty_three_eficient, 5 %>
+            <%= 5 %>
+          </label>
+      </div>
+      <div class="col-xs-4 col-md-12">
+        <%= f.label :thirty_four_calm_in_tense, "34 - Permanece calmo em situações tensas."%>
+          <label class="btn btn-default">
+            <%= f.radio_button :thirty_four_calm_in_tense, 1 %>
+            <%= 1 %>
+          </label>
+          <label class="btn btn-default">
+            <%= f.radio_button :thirty_four_calm_in_tense, 2 %>
+            <%= 2 %>
+          </label>
+          <label class="btn btn-default">
+            <%= f.radio_button :thirty_four_calm_in_tense, 3 %>
+            <%= 3 %>
+          </label>
+          <label class="btn btn-default">
+            <%= f.radio_button :thirty_four_calm_in_tense, 4 %>
+            <%= 4 %>
+          </label>
+          <label class="btn btn-default">
+            <%= f.radio_button :thirty_four_calm_in_tense, 5 %>
+            <%= 5 %>
+          </label>
+      </div>
+      <div class="col-xs-4 col-md-12">
+        <%= f.label :thirty_five_routine, "35 - Prefere o trabalho rotineiro."%>
+          <label class="btn btn-default">
+            <%= f.radio_button :thirty_five_routine, 1 %>
+            <%= 1 %>
+          </label>
+          <label class="btn btn-default">
+            <%= f.radio_button :thirty_five_routine, 2 %>
+            <%= 2 %>
+          </label>
+          <label class="btn btn-default">
+            <%= f.radio_button :thirty_five_routine, 3 %>
+            <%= 3 %>
+          </label>
+          <label class="btn btn-default">
+            <%= f.radio_button :thirty_five_routine, 4 %>
+            <%= 4 %>
+          </label>
+          <label class="btn btn-default">
+            <%= f.radio_button :thirty_five_routine, 5 %>
+            <%= 5 %>
+          </label>
+      </div>
+      <div class="col-xs-4 col-md-12">
+        <%= f.label :thirty_six_friendly, "36 - É sociável, amigável."%>
+          <label class="btn btn-default">
+            <%= f.radio_button :thirty_six_friendly, 1 %>
+            <%= 1 %>
+          </label>
+          <label class="btn btn-default">
+            <%= f.radio_button :thirty_six_friendly, 2 %>
+            <%= 2 %>
+          </label>
+          <label class="btn btn-default">
+            <%= f.radio_button :thirty_six_friendly, 3 %>
+            <%= 3 %>
+          </label>
+          <label class="btn btn-default">
+            <%= f.radio_button :thirty_six_friendly, 4 %>
+            <%= 4 %>
+          </label>
+          <label class="btn btn-default">
+            <%= f.radio_button :thirty_six_friendly, 5 %>
+            <%= 5 %>
+          </label>
+      </div>
+      <div class="col-xs-4 col-md-12">
+        <%= f.label :thirty_seven_rude, "37 - Por vezes é rude com os outros."%>
+          <label class="btn btn-default">
+            <%= f.radio_button :thirty_seven_rude, 1 %>
+            <%= 1 %>
+          </label>
+          <label class="btn btn-default">
+            <%= f.radio_button :thirty_seven_rude, 2 %>
+            <%= 2 %>
+          </label>
+          <label class="btn btn-default">
+            <%= f.radio_button :thirty_seven_rude, 3 %>
+            <%= 3 %>
+          </label>
+          <label class="btn btn-default">
+            <%= f.radio_button :thirty_seven_rude, 4 %>
+            <%= 4 %>
+          </label>
+          <label class="btn btn-default">
+            <%= f.radio_button :thirty_seven_rude, 5 %>
+            <%= 5 %>
+          </label>
+      </div>
+      <div class="col-xs-4 col-md-12">
+        <%= f.label :thirty_eight_planner, "38 - Faz planos e cumpre-os."%>
+          <label class="btn btn-default">
+            <%= f.radio_button :thirty_eight_planner, 1 %>
+            <%= 1 %>
+          </label>
+          <label class="btn btn-default">
+            <%= f.radio_button :thirty_eight_planner, 2 %>
+            <%= 2 %>
+          </label>
+          <label class="btn btn-default">
+            <%= f.radio_button :thirty_eight_planner, 3 %>
+            <%= 3 %>
+          </label>
+          <label class="btn btn-default">
+            <%= f.radio_button :thirty_eight_planner, 4 %>
+            <%= 4 %>
+          </label>
+          <label class="btn btn-default">
+            <%= f.radio_button :thirty_eight_planner, 5 %>
+            <%= 5 %>
+          </label>
+      </div>
+      <div class="col-xs-4 col-md-12">
+        <%= f.label :thirty_nine_easily_nervous, "39 - Fica nervoso facilmente."%>
+          <label class="btn btn-default">
+            <%= f.radio_button :thirty_nine_easily_nervous, 1 %>
+            <%= 1 %>
+          </label>
+          <label class="btn btn-default">
+            <%= f.radio_button :thirty_nine_easily_nervous, 2 %>
+            <%= 2 %>
+          </label>
+          <label class="btn btn-default">
+            <%= f.radio_button :thirty_nine_easily_nervous, 3 %>
+            <%= 3 %>
+          </label>
+          <label class="btn btn-default">
+            <%= f.radio_button :thirty_nine_easily_nervous, 4 %>
+            <%= 4 %>
+          </label>
+          <label class="btn btn-default">
+            <%= f.radio_button :thirty_nine_easily_nervous, 5 %>
+            <%= 5 %>
+          </label>
+      </div>
+      <div class="col-xs-4 col-md-12">
+        <%= f.label :fourty_like_think, "40 - Gosta de refletir, brincar com as ideias."%>
+          <label class="btn btn-default">
+            <%= f.radio_button :fourty_like_think, 1 %>
+            <%= 1 %>
+          </label>
+          <label class="btn btn-default">
+            <%= f.radio_button :fourty_like_think, 2 %>
+            <%= 2 %>
+          </label>
+          <label class="btn btn-default">
+            <%= f.radio_button :fourty_like_think, 3 %>
+            <%= 3 %>
+          </label>
+          <label class="btn btn-default">
+            <%= f.radio_button :fourty_like_think, 4 %>
+            <%= 4 %>
+          </label>
+          <label class="btn btn-default">
+            <%= f.radio_button :fourty_like_think, 5 %>
+            <%= 5 %>
+          </label>
+      </div>
+      <div class="col-xs-4 col-md-12">
+        <%= f.label :fourty_one_low_artistic, "41 - Tem poucs interesses artisticos."%>
+          <label class="btn btn-default">
+            <%= f.radio_button :fourty_one_low_artistic, 1 %>
+            <%= 1 %>
+          </label>
+          <label class="btn btn-default">
+            <%= f.radio_button :fourty_one_low_artistic, 2 %>
+            <%= 2 %>
+          </label>
+          <label class="btn btn-default">
+            <%= f.radio_button :fourty_one_low_artistic, 3 %>
+            <%= 3 %>
+          </label>
+          <label class="btn btn-default">
+            <%= f.radio_button :fourty_one_low_artistic, 4 %>
+            <%= 4 %>
+          </label>
+          <label class="btn btn-default">
+            <%= f.radio_button :fourty_one_low_artistic, 5 %>
+            <%= 5 %>
+          </label>
+      </div>
+      <div class="col-xs-4 col-md-12">
+        <%= f.label :fourty_two_cooperative, "42 - Gosta de cooperar com os outros."%>
+          <label class="btn btn-default">
+            <%= f.radio_button :fourty_two_cooperative, 1 %>
+            <%= 1 %>
+          </label>
+          <label class="btn btn-default">
+            <%= f.radio_button :fourty_two_cooperative, 2 %>
+            <%= 2 %>
+          </label>
+          <label class="btn btn-default">
+            <%= f.radio_button :fourty_two_cooperative, 3 %>
+            <%= 3 %>
+          </label>
+          <label class="btn btn-default">
+            <%= f.radio_button :fourty_two_cooperative, 4 %>
+            <%= 4 %>
+          </label>
+          <label class="btn btn-default">
+            <%= f.radio_button :fourty_two_cooperative, 5 %>
+            <%= 5 %>
+          </label>
+      </div>
+      <div class="col-xs-4 col-md-12">
+        <%= f.label :fourty_three_distractive, "43 - Se distrai com facilidade."%>
+          <label class="btn btn-default">
+            <%= f.radio_button :fourty_three_distractive, 1 %>
+            <%= 1 %>
+          </label>
+          <label class="btn btn-default">
+            <%= f.radio_button :fourty_three_distractive, 2 %>
+            <%= 2 %>
+          </label>
+          <label class="btn btn-default">
+            <%= f.radio_button :fourty_three_distractive, 3 %>
+            <%= 3 %>
+          </label>
+          <label class="btn btn-default">
+            <%= f.radio_button :fourty_three_distractive, 4 %>
+            <%= 4 %>
+          </label>
+          <label class="btn btn-default">
+            <%= f.radio_button :fourty_three_distractive, 5 %>
+            <%= 5 %>
+          </label>
+      </div>
+            <div class="col-xs-4 col-md-12">
+        <%= f.label :fourty_four_sofisticated, "44 - É sofisticado(a) na arte, música ou literatura."%>
+          <label class="btn btn-default">
+            <%= f.radio_button :fourty_four_sofisticated, 1 %>
+            <%= 1 %>
+          </label>
+          <label class="btn btn-default">
+            <%= f.radio_button :fourty_four_sofisticated, 2 %>
+            <%= 2 %>
+          </label>
+          <label class="btn btn-default">
+            <%= f.radio_button :fourty_four_sofisticated, 3 %>
+            <%= 3 %>
+          </label>
+          <label class="btn btn-default">
+            <%= f.radio_button :fourty_four_sofisticated, 4 %>
+            <%= 4 %>
+          </label>
+          <label class="btn btn-default">
+            <%= f.radio_button :fourty_four_sofisticated, 5 %>
+            <%= 5 %>
+          </label>
+      </div>
+      <%= f.button :submit, "Calcular resultados!" %>
+    <% end %>
+  </div>
+</div>
+
