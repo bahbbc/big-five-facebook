@@ -6,6 +6,7 @@ class PersonalityQuestionsController < ApplicationController
 
   def create
     @personality_questions = PersonalityQuestion.new(personality_questions_params)
+    score = PersonalityScoring.new(@personality_questions).compute
   end
 
   def show
