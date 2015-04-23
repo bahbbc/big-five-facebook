@@ -1,6 +1,6 @@
 class PersonalityScoring
 
-  def new(personality_questions)
+  def initialize(personality_questions)
     @personality_questions = personality_questions
   end
 
