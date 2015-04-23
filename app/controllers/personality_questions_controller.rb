@@ -6,10 +6,26 @@ class PersonalityQuestionsController < ApplicationController
 
   def create
     @personality_questions = PersonalityQuestion.new(personality_questions_params)
-    score = PersonalityScoring.new(@personality_questions).compute
+    score = PersonalityScoring.new(@personality_questions)
+    if @personality_questions.valid?
+      UserPersonality.create(
+          extravertion: score.extraversion, agreeableness: score.agreeableness,
+          conscientiousness: score.conscientiousness, neuroticism: score.neuroticism,
+          openness: score.openness
+      )
+      redirect_to :personality_questions
+    else
+      render :new
+    end
+
   end
 
-  def show
+  def index
+    @personality = UserPersonality.last
+  end
+
+  def score
+
   end
 
   def personality_questions_params

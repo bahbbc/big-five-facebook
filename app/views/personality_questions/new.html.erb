@@ -14,6 +14,15 @@
     </div>
     <nav class="navbar navbar-default">
       <br>
+      <% if @personality_questions.errors.any? %>
+          <div id="error_explanation" class="alert alert-danger">
+            <ul>
+              <% @personality_questions.errors.full_messages.each do |msg| %>
+                  <li><%= msg %></li>
+              <% end %>
+            </ul>
+          </div>
+      <% end %>
       <%= simple_form_for @personality_questions, url: personality_questions_path, class: "navbar-form navbar-left" do |f| %>
         <div class="col-xs-12 col-md-12">
           <%= f.label :one_speaker, "1 - É falador(a)."%>
