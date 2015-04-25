@@ -5,7 +5,7 @@ class PersonalityQuestionsController < ApplicationController
   end
 
   def create
-    @personality_questions = PersonalityQuestion.new(personality_questions_params)
+    @personality_questions = PersonalityQuestion.new(personality_questions_params) #.each{ |attr| attr.value = value.to_i })
     score = PersonalityScoring.new(@personality_questions)
     if @personality_questions.valid?
       UserPersonality.create(
@@ -22,10 +22,6 @@ class PersonalityQuestionsController < ApplicationController
 
   def index
     @personality = UserPersonality.last
-  end
-
-  def score
-
   end
 
   def personality_questions_params

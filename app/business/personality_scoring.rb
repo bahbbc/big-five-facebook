@@ -4,6 +4,14 @@ class PersonalityScoring
     @personality_questions = personality_questions
   end
 
+  def compute(questions_hash)
+    sum = 0
+    questions_hash.each do |question|
+      sum =+ question
+    end
+    sum/questions_hash.length
+  end
+
   def extraversion
     (@personality_questions.one_speaker + reverse_count(@personality_questions.six_quiet) +
     @personality_questions.eleven_energy + @personality_questions.sixteen_enthusiastic +
