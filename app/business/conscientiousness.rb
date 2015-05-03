@@ -2,7 +2,7 @@ class Conscientiousness
   include PersonalityScoring
 
   def initialize(personality_questions)
-    @personality_questions
+    @personality_questions = personality_questions
   end
 
   def personality
