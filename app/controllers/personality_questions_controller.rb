@@ -5,7 +5,8 @@ class PersonalityQuestionsController < ApplicationController
   end
 
   def create
-    @user = UserPersonality.koala(request.env['omniauth.auth']['credentials'])
+    @user = UserPersonality.koala(request.env['omniauth.auth']['info'])
+    p "--------------------------------#{request.env['omniauth.auth']}"
     @personality_questions = PersonalityQuestion.new(personality_questions_params)
     if @personality_questions.save
       score = PersonalityCalculator.new(@personality_questions).calculate
@@ -22,7 +23,7 @@ class PersonalityQuestionsController < ApplicationController
   end
 
   def index
-    @user = UserPersonality.koala(request.env['omniauth.auth']['credentials'])
+    @user = UserPersonality.koala(request.env['omniauth.auth']['info'])
     @personalities = UserPersonality.last
     PersonalityGraphGenerator.new(@personalities).spider_graph
   end
