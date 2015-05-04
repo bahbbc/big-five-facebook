@@ -4,6 +4,6 @@ class UserController < ApplicationController
 
   def login
     @user = User.koala(request.env['omniauth.auth']['credentials'])
-    redirect_to new_personality_question_url
+    # redirect_to new_personality_question_url
   end
 end
