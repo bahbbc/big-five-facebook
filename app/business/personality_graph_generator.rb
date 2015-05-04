@@ -12,8 +12,7 @@ class PersonalityGraphGenerator
       g.data(data[0], data[1])
     end
 
-    # Default theme
-    g.write("app/assets/images/spider_keynote.png")
+    Cloudinary::Uploader.upload(g.write("tmp/personality-graph-#{user.email}.png"), public_id: "graph-#{user.email}")
   end
 
   private
