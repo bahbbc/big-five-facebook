@@ -12,7 +12,7 @@ class PersonalityGraphGenerator
       g.data(data[0], data[1])
     end
 
-    Cloudinary::Uploader.upload(g.write("tmp/personality-graph-#{user.email}.png"), public_id: "graph-#{user.email}")
+    Cloudinary::Uploader.upload(g.write("tmp/personality-graph-lalalala.png"), public_id: "graph-lalalala")
   end
 
   private
