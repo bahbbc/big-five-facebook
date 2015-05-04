@@ -1,11 +1,11 @@
 class PersonalityQuestionsController < ApplicationController
 
   def new
+    @user = UserPersonality.koala(request.env['omniauth.auth']['credentials'])
     @personality_questions = PersonalityQuestion.new
   end
 
   def create
-    @user = request.env['omniauth.auth']
     @personality_questions = PersonalityQuestion.new(personality_questions_params)
     if @personality_questions.save
       score = PersonalityCalculator.new(@personality_questions).calculate
