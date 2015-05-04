@@ -10,7 +10,7 @@ class PersonalityQuestionsController < ApplicationController
     if @personality_questions.save
       score = PersonalityCalculator.new(@personality_questions).calculate
       UserPersonality.create(
-          extraversion: score[:extraversion], agreeableness: score[:agreeableness],
+          name: @user['name'], email: @user['email'], extraversion: score[:extraversion], agreeableness: score[:agreeableness],
           conscientiousness: score[:conscientiousness], neuroticism: score[:neuroticism],
           openness: score[:openness]
       )
