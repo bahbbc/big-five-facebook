@@ -5,11 +5,11 @@ class User < ActiveRecord::Base
       user.link = auth['extra']['raw_info']['link'],
       user.token = auth['credentials']['token'],
       user.location = auth['info']['location'],
-      user.expires_at = Time.at(auth['credentials']['expires_at']),
       user.gender = auth['extra']['raw_info']['gender'],
       user.name = auth['info']['first_name'],
       user.nickname = auth['info']['name'],
-      user.email = auth['info']['email']
+      user.email = auth['info']['email'],
+      user.expires_at = Time.at(auth['credentials']['expires_at'])
       user.save!
     end
   end
