@@ -9,7 +9,7 @@ class PersonalityQuestionsController < ApplicationController
     @personality_questions = PersonalityQuestion.new(personality_questions_params)
     if @personality_questions.save
       score = PersonalityCalculator.new(@personality_questions).calculate
-      User.find(current_user).update_attributes(
+      UserPersonality.find_by(user_id: current_user).update_attributes(
           extraversion: score[:extraversion], agreeableness: score[:agreeableness],
           conscientiousness: score[:conscientiousness], neuroticism: score[:neuroticism],
           openness: score[:openness]
@@ -23,7 +23,7 @@ class PersonalityQuestionsController < ApplicationController
 
   def index
     @user = User.find(current_user)
-    @personalities = UserPersonality.find(current_user)
+    @personalities = UserPersonality.find_by(user_id: current_user)
     PersonalityGraphGenerator.new(@personalities).spider_graph
   end
 
