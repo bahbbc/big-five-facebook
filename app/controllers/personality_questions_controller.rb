@@ -9,11 +9,10 @@ class PersonalityQuestionsController < ApplicationController
     @personality_questions = PersonalityQuestion.new(personality_questions_params)
     if @personality_questions.save
       score = PersonalityCalculator.new(@personality_questions).calculate
-      UserPersonality.find_by(user_id: current_user).update_attributes(
+      UserPersonality.create(
           extraversion: score[:extraversion], agreeableness: score[:agreeableness],
           conscientiousness: score[:conscientiousness], neuroticism: score[:neuroticism],
-          openness: score[:openness]
-      )
+          openness: score[:openness], user_id: current_user)
       redirect_to :personality_questions
     else
       render :new
