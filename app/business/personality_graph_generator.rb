@@ -11,8 +11,8 @@ class PersonalityGraphGenerator
     normalize.each do |data|
       g.data(data[0], data[1])
     end
-
-    Cloudinary::Uploader.upload(g.write("tmp/personality-graph-lalalala.png"), public_id: "graph-lalalala")
+    g.write("tmp/personality-graph-#{@personalities.user_id}.png")
+    #Cloudinary::Uploader.upload("tmp/personality-graph-#{@personalities.user_id}.png", public_id: "graph-#{@personalities.user_id}")
   end
 
   private
