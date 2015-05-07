@@ -1,7 +1,7 @@
 class PersonalityQuestionsController < ApplicationController
 
   def new
-    @user = UserPersonality.koala(request.env['omniauth.auth']['credentials'])
+    @user = User.find(current_user)
     @personality_questions = PersonalityQuestion.new
   end
 
@@ -9,8 +9,8 @@ class PersonalityQuestionsController < ApplicationController
     @personality_questions = PersonalityQuestion.new(personality_questions_params)
     if @personality_questions.save
       score = PersonalityCalculator.new(@personality_questions).calculate
-      UserPersonality.create(
-          name: @user['name'], email: @user['email'], extraversion: score[:extraversion], agreeableness: score[:agreeableness],
+      User.find(current_user).update_attributes(
+          extraversion: score[:extraversion], agreeableness: score[:agreeableness],
           conscientiousness: score[:conscientiousness], neuroticism: score[:neuroticism],
           openness: score[:openness]
       )
@@ -22,8 +22,8 @@ class PersonalityQuestionsController < ApplicationController
   end
 
   def index
-    @user = UserPersonality.koala(request.env['omniauth.auth']['info'])
-    @personalities = UserPersonality.last
+    @user = User.find(current_user)
+    @personalities = UserPersonality.find(current_user)
     PersonalityGraphGenerator.new(@personalities).spider_graph
   end
 

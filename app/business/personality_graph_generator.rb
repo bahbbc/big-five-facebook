@@ -18,7 +18,7 @@ class PersonalityGraphGenerator
   private
 
   def normalize
-    @personalities.attributes.except("created_at", "updated_at", "id").to_a.each do |el|
+    @personalities.attributes.except("created_at", "updated_at", "id", "user_id").to_a.each do |el|
       el[1] = [el[1]]
     end
   end
