@@ -23,7 +23,6 @@ class PersonalityQuestionsController < ApplicationController
   def index
     @user = current_user
     @personalities = UserPersonality.find_by(user_id: current_user.id)
-    PersonalityGraphGenerator.new(@personalities).spider_graph
   end
 
   def personality_questions_params

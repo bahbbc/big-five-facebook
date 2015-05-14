@@ -11,6 +11,35 @@
   </div>
 
   <div class="col-xs-12 col-md-12">
-    <%= image_tag("personality-graph-#{@user.id}.png")%>
+    <div class="progress">
+      <div class="progress-bar progress-bar-success progress-bar" role="progressbar" aria-valuenow="<%= @personalities.agreeableness %>" aria-valuemin="0" aria-valuemax="100" style="width: 40%">
+        <span class="sr-only col-xs-6 col-md-6">Independente</span>
+        <span class="sr-only col-xs-6 col-md-6">Agradável</span>
+      </div>
+    </div>
+    <div class="progress">
+      <div class="progress-bar progress-bar-info progress-bar" role="progressbar" aria-valuenow="<%= @personalities.conscientiousness %>" aria-valuemin="0" aria-valuemax="100" style="width: 20%">
+        <span class="sr-only col-xs-6 col-md-6">Bagunceiro</span>
+        <span class="sr-only col-xs-6 col-md-6">Consciente</span>
+      </div>
+    </div>
+    <div class="progress">
+      <div class="progress-bar progress-bar-warning progress-bar" role="progressbar" aria-valuenow="<%= @personalities.extraversion %>" aria-valuemin="0" aria-valuemax="100" style="width: 60%">
+        <span class="sr-only col-xs-6 col-md-6">Introvertido</span>
+        <span class="sr-only col-xs-6 col-md-6">Extrovertido</span>
+      </div>
+    </div>
+    <div class="progress">
+      <div class="progress-bar progress-bar-danger progress-bar" role="progressbar" aria-valuenow="<%= @personalities.neuroticism %>" aria-valuemin="0" aria-valuemax="100" style="width: 80%">
+        <span class="sr-only col-xs-6 col-md-6">Constante</span>
+        <span class="sr-only col-xs-6 col-md-6">Instável</span>
+      </div>
+    </div>
+    <div class="progress">
+      <div class="progress-bar progress-bar-info progress-bar-striped" role="progressbar" aria-valuenow="<%= @personalities.openness %>" aria-valuemin="0" aria-valuemax="100" style="width: 80%">
+        <span class="sr-only col-xs-6 col-md-6">Conservador</span>
+        <span class="sr-only col-xs-6 col-md-6">Liberal</span>
+      </div>
+    </div>
   </div>
 </div>
