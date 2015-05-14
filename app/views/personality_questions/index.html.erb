@@ -15,7 +15,7 @@
       <div class="progress-bar progress-bar-success progress-bar" role="progressbar" aria-valuenow="<%= @personalities.agreeableness %>" aria-valuemin="0" aria-valuemax="100" style="width: <%= @personalities.agreeableness * 20 %>%">
         <span class="sr-only"><%= @personalities.agreeableness %></span>
       </div>
-      <div class="progress-bar progress-bar-info progress-bar-striped" role="progressbar" aria-valuenow="<%= @personalities.agreeableness %>" aria-valuemin="0" aria-valuemax="100" style="width: <%= 100 - (@personalities.agreeableness * 20) %>%">
+      <div class="progress-bar progress-bar-success progress-bar-striped" role="progressbar" aria-valuenow="<%= @personalities.agreeableness %>" aria-valuemin="0" aria-valuemax="100" style="width: <%= 100 - (@personalities.agreeableness * 20) %>%">
         <span class="sr-only"><%= @personalities.agreeableness %></span>
       </div>
     </div>
@@ -25,7 +25,7 @@
       <div class="progress-bar progress-bar-info progress-bar" role="progressbar" aria-valuenow="<%= @personalities.conscientiousness %>" aria-valuemin="0" aria-valuemax="100" style="width: <%= @personalities.conscientiousness * 20 %>%">
         <span class="sr-only"><%= @personalities.conscientiousness %></span>
       </div>
-      <div class="progress-bar progress-bar-success progress-bar-striped" role="progressbar" aria-valuenow="<%= @personalities.conscientiousness %>" aria-valuemin="0" aria-valuemax="100" style="width: <%= 100 - (@personalities.conscientiousness * 20) %>%">
+      <div class="progress-bar progress-bar-info progress-bar-striped" role="progressbar" aria-valuenow="<%= @personalities.conscientiousness %>" aria-valuemin="0" aria-valuemax="100" style="width: <%= 100 - (@personalities.conscientiousness * 20) %>%">
         <span class="sr-only"><%= @personalities.conscientiousness %></span>
       </div>
     </div>
@@ -35,7 +35,7 @@
       <div class="progress-bar progress-bar-warning progress-bar" role="progressbar" aria-valuenow="<%= @personalities.extraversion %>" aria-valuemin="0" aria-valuemax="100" style="width: <%= @personalities.extraversion * 20 %>%">
         <span class="sr-only"><%= @personalities.extraversion %></span>
       </div>
-      <div class="progress-bar progress-bar-danger progress-bar-striped" role="progressbar" aria-valuenow="<%= @personalities.extraversion %>" aria-valuemin="0" aria-valuemax="100" style="width: <%= 100 - (@personalities.extraversion * 20) %>%">
+      <div class="progress-bar progress-bar-warning progress-bar-striped" role="progressbar" aria-valuenow="<%= @personalities.extraversion %>" aria-valuemin="0" aria-valuemax="100" style="width: <%= 100 - (@personalities.extraversion * 20) %>%">
         <span class="sr-only"><%= @personalities.extraversion %></span>
       </div>
     </div>
@@ -45,7 +45,7 @@
       <div class="progress-bar progress-bar-danger progress-bar" role="progressbar" aria-valuenow="<%= @personalities.neuroticism %>" aria-valuemin="0" aria-valuemax="100" style="width: <%= @personalities.neuroticism * 20 %>%">
         <span class="sr-only"><%= @personalities.neuroticism %></span>
       </div>
-      <div class="progress-bar progress-bar-striped" role="progressbar" aria-valuenow="<%= @personalities.neuroticism %>" aria-valuemin="0" aria-valuemax="100" style="width: <%= 100 - (@personalities.neuroticism * 20) %>%">
+      <div class="progress-bar progress-bar-danger progress-bar-striped" role="progressbar" aria-valuenow="<%= @personalities.neuroticism %>" aria-valuemin="0" aria-valuemax="100" style="width: <%= 100 - (@personalities.neuroticism * 20) %>%">
         <span class="sr-only"><%= @personalities.neuroticism %></span>
       </div>
     </div>
@@ -55,7 +55,7 @@
       <div class="progress-bar" role="progressbar" aria-valuenow="<%= @personalities.openness %>" aria-valuemin="0" aria-valuemax="100" style="width: <%= @personalities.openness * 20 %>%">
         <span class="sr-only"><%= @personalities.openness %></span>
       </div>
-      <div class="progress-bar progress-bar-warning progress-bar-striped" role="progressbar" aria-valuenow="<%= @personalities.openness %>" aria-valuemin="0" aria-valuemax="100" style="width: <%= 100 - (@personalities.openness * 20) %>%">
+      <div class="progress-bar" style="background-color: #b77033" role="progressbar" aria-valuenow="<%= @personalities.openness %>" aria-valuemin="0" aria-valuemax="100" style="width: <%= 100 - (@personalities.openness * 20) %>%">
         <span class="sr-only"><%= @personalities.openness %></span>
       </div>
     </div>
@@ -65,3 +65,12 @@
   <p>Por favor, compartilhe esse teste no seu facebook para ajudar a minha pesquisa =)</p>
   <div class="fb-share-button" data-href="https://teste-personalidade.herokuapp.com/personality_questions/new" data-layout="button_count"></div>
 </div>
+
+
+<!--
+azul = #337ab7 -> #b77033
+vermelho = #d9534f -> #4fd5d9
+amarelo = #f0ad4e -> #4e91f0
+azul claro = #5bc0de -> #de795b
+verde = #5cb85c -> #b85cb8
+      -->
