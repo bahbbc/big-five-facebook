@@ -6,9 +6,10 @@ class Conscientiousness
   end
 
   def personality
-    compute([@personality_questions.three_exaustive_work, reverse_count(@personality_questions.eight_careless),
-    @personality_questions.thirteen_confidence_worker, reverse_count(@personality_questions.eighteen_unorganized),
-    reverse_count(@personality_questions.twenty_three_lazy), @personality_questions.twenty_eight_perseverant,
-    @personality_questions.thirty_three_eficient, reverse_count(@personality_questions.fourty_three_distractive)])
+    compute([@personality_questions.four_sad, @personality_questions.six_quiet,
+      reverse_count(@personality_questions.seventeen_forgive), reverse_count(@personality_questions.ninteen_concerned)
+      @personality_questions.twenty_imaginative, reverse_count(@personality_questions.twenty_two_others_trust),
+      @personality_questions.thirty_one_shy, @personality_questions.thirty_two_good,
+      reverse_count(@personality_questions.thirty_eight_planner)])
   end
 end

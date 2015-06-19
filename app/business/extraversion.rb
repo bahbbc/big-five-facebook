@@ -6,10 +6,10 @@ class Extraversion
   end
 
   def personality
-    compute([@personality_questions.one_speaker, reverse_count(@personality_questions.six_quiet),
-    @personality_questions.eleven_energy, @personality_questions.sixteen_enthusiastic,
-    reverse_count(@personality_questions.twenty_one_calm),  @personality_questions.twenty_six_assertive,
-    reverse_count(@personality_questions.thirty_one_shy), @personality_questions.thirty_six_friendly])
+    compute([@personality_questions.one_speaker, @personality_questions.five_original,
+      reverse_count(@personality_questions.twelve_fighter), reverse_count(@personality_questions.sixteen_enthusiastic),
+      @personality_questions.twenty_six_assertive, @personality_questions.twenty_nine_instable,
+      @personality_questions.thirty_seven_rude, reverse_count(@personality_questions.fourty_two_cooperative)])
   end
 
 end

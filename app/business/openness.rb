@@ -6,11 +6,10 @@ class Openness
   end
 
   def personality
-    compute([@personality_questions.five_original, @personality_questions.ten_curiosity,
-    @personality_questions.fifteen_thinker, @personality_questions.twenty_imaginative,
-    @personality_questions.twenty_five_inventive, @personality_questions.thrty_experience,
-    reverse_count(@personality_questions.thirty_five_routine), @personality_questions.thirty_eight_planner,
-    @personality_questions.fourty_like_think, reverse_count(@personality_questions.fourty_one_low_artistic),
-    @personality_questions.fourty_four_sofisticated])
+    compute([@personality_questions.nine_stressless, @personality_questions.eleven_energy,
+        @personality_questions.thirteen_confidence_worker, reverse_count(@personality_questions.twenty_four_stable)
+        @personality_questions.twenty_five_inventive, @personality_questions.thirty_three_eficient,
+        @personality_questions.thirty_five_routine, @personality_questions.thirty_nine_easily_nervous,
+        reverse_count(@personality_questions.fourty_three_distractive), @personality_questions.fourty_four_sofisticated])
   end
 end

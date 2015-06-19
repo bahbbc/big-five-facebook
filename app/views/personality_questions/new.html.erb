@@ -1,16 +1,11 @@
-<div class="jumbotron">
-  <div class="container">
-    <h1> Teste de Personalidade </h1>
-  </div>
-</div>
+<%= render 'shared/jumbotron_header' %>
 <div class="container">
   <div class="row">
     <div class="form-group container-fluid">
       <div class="alert alert-info">
-         <%= @user.name %>, responda as 44 perguntas abaixo para conhecer a sua personalidade! É rapidinho!
+         <%= @user.name %>, responda as 44 perguntas abaixo para conhecer a sua personalidade! Reserve 10 minutinhos para responder,  é rapidinho!
         <br>
         Escolha o número que corresponde ao grau em que acredita que a frase te caracteriza.
-        Não existem respostas certas nem erradas. Por favor responda com sinceridade, com o modo que mais te representa!
       </div>
       <% if @personality_questions.errors.any? %>
         <div id="error_explanation" class="alert alert-danger">
@@ -27,7 +22,7 @@
       <div class="panel-title col-xs-offset-4 col-md-offset-4">Escolha o quanto cada frase te caracteriza</div>
       <ul class = "list-group">
         <li class="list-group-item col-xs-12 col-md-12">
-          <%= f.label :one_speaker, "1 - É falador(a).", class: "col-xs-4 col-md-4"%>
+          <%= f.label :one_speaker, "1 - É conversador, comunicativo.", class: "col-xs-4 col-md-4"%>
           <label class="col-xs-1 col-md-1 col-xs-1 col-md-1">
             <%= f.radio_button :one_speaker, 1 %>
             <%= 1 %>
@@ -50,7 +45,7 @@
           </label>
         </li>
         <li class="list-group-item col-xs-12 col-md-12">
-          <%= f.label :two_show_defects, "2 - Tende a encontrar defeitos nos outros.", class: "col-xs-4 col-md-4"%>
+          <%= f.label :two_show_defects, "2 - Às vezes é frio e distante", class: "col-xs-4 col-md-4"%>
           <label class="col-xs-1 col-md-1">
             <%= f.radio_button :two_show_defects, 1 %>
             <%= 1 %>
@@ -73,7 +68,7 @@
           </label>
         </li>
         <li class="list-group-item col-xs-12 col-md-12">
-          <%= f.label :three_exaustive_work, "3 - Faz um trabalho exaustivo.", class: "col-xs-4 col-md-4"%>
+          <%= f.label :three_exaustive_work, "3 - Tende a ser crítico com os outros.", class: "col-xs-4 col-md-4"%>
           <label class="col-xs-1 col-md-1">
             <%= f.radio_button :three_exaustive_work, 1 %>
             <%= 1 %>
@@ -96,7 +91,7 @@
           </label>
         </li>
         <li class="list-group-item col-xs-12 col-md-12">
-          <%= f.label :four_sad, "4 - É deprimido(a), triste.", class: "col-xs-4 col-md-4"%>
+          <%= f.label :four_sad, "4 - É minucioso, detalhista no trabalho.", class: "col-xs-4 col-md-4"%>
           <label class="col-xs-1 col-md-1">
             <%= f.radio_button :four_sad, 1 %>
             <%= 1 %>
@@ -119,7 +114,7 @@
           </label>
         </li>
         <li class="list-group-item col-xs-12 col-md-12">
-          <%= f.label :five_original, "5 - É original, tem sempre novas ideias", class: "col-xs-4 col-md-4"%>
+          <%= f.label :five_original, "5 - É assertivo, não teme expressar o que sente.", class: "col-xs-4 col-md-4"%>
           <label class="col-xs-1 col-md-1">
             <%= f.radio_button :five_original, 1 %>
             <%= 1 %>
@@ -142,7 +137,7 @@
           </label>
         </li>
         <li class="list-group-item col-xs-12 col-md-12">
-          <%= f.label :six_quiet, "6 - É reservado(a)", class: "col-xs-4 col-md-4"%>
+          <%= f.label :six_quiet, "6 - Insiste até concluir a tarefa ou o trabalho.", class: "col-xs-4 col-md-4"%>
           <label class="col-xs-1 col-md-1">
             <%= f.radio_button :six_quiet, 1 %>
             <%= 1 %>
@@ -165,7 +160,7 @@
           </label>
         </li>
         <li class="list-group-item col-xs-12 col-md-12">
-          <%= f.label :seven_prestative, "7 - É prestativo e não inveja os outros", class: "col-xs-4 col-md-4"%>
+          <%= f.label :seven_prestative, "7 - É depressivo, triste.", class: "col-xs-4 col-md-4"%>
           <label class="col-xs-1 col-md-1">
             <%= f.radio_button :seven_prestative, 1 %>
             <%= 1 %>
@@ -188,7 +183,7 @@
           </label>
         </li>
         <li class="list-group-item col-xs-12 col-md-12">
-          <%= f.label :eight_careless, "8 - Por vezes pode ser um pouco descuidado(a).", class: "col-xs-4 col-md-4"%>
+          <%= f.label :eight_careless, "8 - Gosta de cooperar com os outros.", class: "col-xs-4 col-md-4"%>
           <label class="col-xs-1 col-md-1">
             <%= f.radio_button :eight_careless, 1 %>
             <%= 1 %>
@@ -211,7 +206,7 @@
           </label>
         </li>
         <li class="list-group-item col-xs-12 col-md-12">
-          <%= f.label :nine_stressless, "9 - É relaxado(a), lida bem com o stress.", class: "col-xs-4 col-md-4"%>
+          <%= f.label :nine_stressless, "9 - É original, tem sempre novas idéias.", class: "col-xs-4 col-md-4"%>
           <label class="col-xs-1 col-md-1">
             <%= f.radio_button :nine_stressless, 1 %>
             <%= 1 %>
@@ -234,7 +229,7 @@
           </label>
         </li>
         <li class="list-group-item col-xs-12 col-md-12">
-          <%= f.label :ten_curiosity, "10 - Tem curiosidade em relação a várias coisas.", class: "col-xs-4 col-md-4"%>
+          <%= f.label :ten_curiosity, "10 - É temperamental, muda de humor facilmente.", class: "col-xs-4 col-md-4"%>
           <label class="col-xs-1 col-md-1">
             <%= f.radio_button :ten_curiosity, 1 %>
             <%= 1 %>
@@ -257,7 +252,7 @@
           </label>
         </li>
         <li class="list-group-item col-xs-12 col-md-12">
-          <%= f.label :eleven_energy, "11 - Tem muita energia.", class: "col-xs-4 col-md-4"%>
+          <%= f.label :eleven_energy, "11 - É inventivo, criativo.", class: "col-xs-4 col-md-4"%>
           <label class="col-xs-1 col-md-1">
             <%= f.radio_button :eleven_energy, 1 %>
             <%= 1 %>
@@ -280,7 +275,7 @@
           </label>
         </li>
         <li class="list-group-item col-xs-12 col-md-12">
-          <%= f.label :twelve_fighter, "12 - Inicia muitas disputas com os outros.", class: "col-xs-4 col-md-4"%>
+          <%= f.label :twelve_fighter, "12 - É reservado.", class: "col-xs-4 col-md-4"%>
             <label class="col-xs-1 col-md-1">
             <%= f.radio_button :twelve_fighter, 1 %>
             <%= 1 %>
@@ -303,7 +298,7 @@
           </label>
         </li>
         <li class="list-group-item col-xs-12 col-md-12">
-          <%= f.label :thirteen_confidence_worker, "13 - É um trabalhador(a) de confiança.", class: "col-xs-4 col-md-4"%>
+          <%= f.label :thirteen_confidence_worker, "13 - Valoriza o artístico, o estético.", class: "col-xs-4 col-md-4"%>
           <label class="col-xs-1 col-md-1">
             <%= f.radio_button :thirteen_confidence_worker, 1 %>
             <%= 1 %>
@@ -326,7 +321,7 @@
           </label>
         </li>
         <li class="list-group-item col-xs-12 col-md-12">
-          <%= f.label :fourteen_tense, "14 - Pode ficar tenso.", class: "col-xs-4 col-md-4"%>
+          <%= f.label :fourteen_tense, "14 - É emocionalmente estável, não se altera facilmente.", class: "col-xs-4 col-md-4"%>
           <label class="col-xs-1 col-md-1">
             <%= f.radio_button :fourteen_tense, 1 %>
             <%= 1 %>
@@ -349,7 +344,7 @@
           </label>
         </li>
         <li class="list-group-item col-xs-12 col-md-12">
-          <%= f.label :fifteen_thinker, "15 - É engenhoso(a), um(a) pensador(a) profundo.", class: "col-xs-4 col-md-4"%>
+          <%= f.label :fifteen_thinker, "15 - É prestativo e ajuda os outros.", class: "col-xs-4 col-md-4"%>
           <label class="col-xs-1 col-md-1">
             <%= f.radio_button :fifteen_thinker, 1 %>
             <%= 1 %>
@@ -372,7 +367,7 @@
           </label>
         </li>
         <li class="list-group-item col-xs-12 col-md-12">
-          <%= f.label :sixteen_enthusiastic, "16 - Gera muito entusiasmo.", class: "col-xs-4 col-md-4"%>
+          <%= f.label :sixteen_enthusiastic, "16 - É, às vezes, tímido, inibido.", class: "col-xs-4 col-md-4"%>
           <label class="col-xs-1 col-md-1">
             <%= f.radio_button :sixteen_enthusiastic, 1 %>
             <%= 1 %>
@@ -395,7 +390,7 @@
           </label>
         </li>
         <li class="list-group-item col-xs-12 col-md-12">
-          <%= f.label :seventeen_forgive, "17 - Perdoa com facilidade", class: "col-xs-4 col-md-4"%>
+          <%= f.label :seventeen_forgive, "17 - Pode ser um tanto descuidado", class: "col-xs-4 col-md-4"%>
           <label class="col-xs-1 col-md-1">
             <%= f.radio_button :seventeen_forgive, 1 %>
             <%= 1 %>
@@ -418,7 +413,7 @@
           </label>
         </li>
         <li class="list-group-item col-xs-12 col-md-12">
-          <%= f.label :eighteen_unorganized, "18 - Tende a ser desorganizado(a).", class: "col-xs-4 col-md-4"%>
+          <%= f.label :eighteen_unorganized, "18 - É amável, tem consideração pelos outros.", class: "col-xs-4 col-md-4"%>
           <label class="col-xs-1 col-md-1">
             <%= f.radio_button :eighteen_unorganized, 1 %>
             <%= 1 %>
@@ -441,7 +436,7 @@
           </label>
         </li>
         <li class="list-group-item col-xs-12 col-md-12">
-          <%= f.label :ninteen_concerned, "19 - Se preocupa muito.", class: "col-xs-4 col-md-4"%>
+          <%= f.label :ninteen_concerned, "19 - Tende a ser preguiçoso.", class: "col-xs-4 col-md-4"%>
           <label class="col-xs-1 col-md-1">
             <%= f.radio_button :ninteen_concerned, 1 %>
             <%= 1 %>
@@ -464,7 +459,7 @@
           </label>
         </li>
         <li class="list-group-item col-xs-12 col-md-12">
-          <%= f.label :twenty_imaginative, "20 - Tem uma imaginação ativa.", class: "col-xs-4 col-md-4"%>
+          <%= f.label :twenty_imaginative, "20 - Faz as coisas com eficiência.", class: "col-xs-4 col-md-4"%>
           <label class="col-xs-1 col-md-1">
             <%= f.radio_button :twenty_imaginative, 1 %>
             <%= 1 %>
@@ -487,7 +482,7 @@
           </label>
         </li>
         <li class="list-group-item col-xs-12 col-md-12">
-          <%= f.label :twenty_one_calm, "21 - Tende a ser sossegado(a).", class: "col-xs-4 col-md-4"%>
+          <%= f.label :twenty_one_calm, "21 - É relaxado, controla bem o estresse.", class: "col-xs-4 col-md-4"%>
           <label class="col-xs-1 col-md-1">
             <%= f.radio_button :twenty_one_calm, 1 %>
             <%= 1 %>
@@ -510,7 +505,7 @@
           </label>
         </li>
         <li class="list-group-item col-xs-12 col-md-12">
-          <%= f.label :twenty_two_others_trust, "22 - Geralmente é de confiança.", class: "col-xs-4 col-md-4"%>
+          <%= f.label :twenty_two_others_trust, "22 - É facilmente distraído.", class: "col-xs-4 col-md-4"%>
           <label class="col-xs-1 col-md-1">
             <%= f.radio_button :twenty_two_others_trust, 1 %>
             <%= 1 %>
@@ -533,7 +528,7 @@
           </label>
         </li>
         <li class="list-group-item col-xs-12 col-md-12">
-          <%= f.label :twenty_three_lazy, "23 - Tende a ser preguiçoso(a).", class: "col-xs-4 col-md-4"%>
+          <%= f.label :twenty_three_lazy, "23 - Mantém-se calmo nas situações tensas.", class: "col-xs-4 col-md-4"%>
           <label class="col-xs-1 col-md-1">
             <%= f.radio_button :twenty_three_lazy, 1 %>
             <%= 1 %>
@@ -556,7 +551,7 @@
           </label>
         </li>
         <li class="list-group-item col-xs-12 col-md-12">
-          <%= f.label :twenty_four_stable, "24 - É emocionalmente estável, não se aborrece com facilidade", class: "col-xs-4 col-md-4"%>
+          <%= f.label :twenty_four_stable, "24 - Prefere trabalho rotineiro.", class: "col-xs-4 col-md-4"%>
           <label class="col-xs-1 col-md-1">
             <%= f.radio_button :twenty_four_stable, 1 %>
             <%= 1 %>
@@ -579,7 +574,7 @@
           </label>
         </li>
         <li class="list-group-item col-xs-12 col-md-12">
-          <%= f.label :twenty_five_inventive, "25 - É inventivo(a).", class: "col-xs-4 col-md-4"%>
+          <%= f.label :twenty_five_inventive, "25 - É curioso sobre muitas coisas diferentes.", class: "col-xs-4 col-md-4"%>
           <label class="col-xs-1 col-md-1">
             <%= f.radio_button :twenty_five_inventive, 1 %>
             <%= 1 %>
@@ -602,7 +597,7 @@
           </label>
         </li>
         <li class="list-group-item col-xs-12 col-md-12">
-          <%= f.label :twenty_six_assertive, "26 - Tem uma personalidade assertiva.", class: "col-xs-4 col-md-4"%>
+          <%= f.label :twenty_six_assertive, "26 - É sociável, extrovertido.", class: "col-xs-4 col-md-4"%>
           <label class="col-xs-1 col-md-1">
             <%= f.radio_button :twenty_six_assertive, 1 %>
             <%= 1 %>
@@ -625,7 +620,7 @@
           </label>
         </li>
         <li class="list-group-item col-xs-12 col-md-12">
-          <%= f.label :twenty_seven_cold, "27 - Pode ser frio(a) e indiferente.", class: "col-xs-4 col-md-4"%>
+          <%= f.label :twenty_seven_cold, "27 - É geralmente confiável.", class: "col-xs-4 col-md-4"%>
           <label class="col-xs-1 col-md-1">
             <%= f.radio_button :twenty_seven_cold, 1 %>
             <%= 1 %>
@@ -648,7 +643,7 @@
           </label>
         </li>
         <li class="list-group-item col-xs-12 col-md-12">
-          <%= f.label :twenty_eight_perseverant, "28 - É perseverante até a tarefa ser concluída.", class: "col-xs-4 col-md-4"%>
+          <%= f.label :twenty_eight_perseverant, "28 - É, às vezes, rude (grosseiro) com os outros.", class: "col-xs-4 col-md-4"%>
           <label class="col-xs-1 col-md-1">
             <%= f.radio_button :twenty_eight_perseverant, 1 %>
             <%= 1 %>
@@ -671,7 +666,7 @@
           </label>
         </li>
         <li class="list-group-item col-xs-12 col-md-12">
-          <%= f.label :twenty_nine_instable, "29 - Pode ter um humor instável.", class: "col-xs-4 col-md-4"%>
+          <%= f.label :twenty_nine_instable, "29 - É cheio de energia.", class: "col-xs-4 col-md-4"%>
           <label class="col-xs-1 col-md-1">
             <%= f.radio_button :twenty_nine_instable, 1 %>
             <%= 1 %>
@@ -694,7 +689,7 @@
           </label>
         </li>
         <li class="list-group-item col-xs-12 col-md-12">
-          <%= f.label :thrty_experience, "30 - Valoriza experiências artisticas, estéticas.", class: "col-xs-4 col-md-4"%>
+          <%= f.label :thrty_experience, "30 - Começa discussões, disputas com os outros.", class: "col-xs-4 col-md-4"%>
           <label class="col-xs-1 col-md-1">
             <%= f.radio_button :thrty_experience, 1 %>
             <%= 1 %>
@@ -717,7 +712,7 @@
           </label>
         </li>
         <li class="list-group-item col-xs-12 col-md-12">
-          <%= f.label :thirty_one_shy, "31 - Por vezes é tímido(a), inibido(a).", class: "col-xs-4 col-md-4"%>
+          <%= f.label :thirty_one_shy, "31 - É um trabalhador de confiança.", class: "col-xs-4 col-md-4"%>
           <label class="col-xs-1 col-md-1">
             <%= f.radio_button :thirty_one_shy, 1 %>
             <%= 1 %>
@@ -740,7 +735,7 @@
           </label>
         </li>
         <li class="list-group-item col-xs-12 col-md-12">
-          <%= f.label :thirty_two_good, "32 - É atencioso(a) e bondoso(a) com quase todos.", class: "col-xs-4 col-md-4"%>
+          <%= f.label :thirty_two_good, "32 - Faz planos e os segue a risca.", class: "col-xs-4 col-md-4"%>
             <label class="col-xs-1 col-md-1">
             <%= f.radio_button :thirty_two_good, 1 %>
             <%= 1 %>
@@ -763,7 +758,7 @@
           </label>
         </li>
         <li class="list-group-item col-xs-12 col-md-12">
-          <%= f.label :thirty_three_eficient, "33 - Faz as coisas de modo eficaz.", class: "col-xs-4 col-md-4"%>
+          <%= f.label :thirty_three_eficient, "33 - Tem uma imaginação fértil.", class: "col-xs-4 col-md-4"%>
           <label class="col-xs-1 col-md-1">
             <%= f.radio_button :thirty_three_eficient, 1 %>
             <%= 1 %>
@@ -786,7 +781,7 @@
           </label>
         </li>
         <li class="list-group-item col-xs-12 col-md-12">
-          <%= f.label :thirty_four_calm_in_tense, "34 - Permanece calmo em situações tensas.", class: "col-xs-4 col-md-4"%>
+          <%= f.label :thirty_four_calm_in_tense, "34 - Fica tenso com frequência.", class: "col-xs-4 col-md-4"%>
           <label class="col-xs-1 col-md-1">
             <%= f.radio_button :thirty_four_calm_in_tense, 1 %>
             <%= 1 %>
@@ -809,7 +804,7 @@
           </label>
         </li>
         <li class="list-group-item col-xs-12 col-md-12">
-          <%= f.label :thirty_five_routine, "35 - Prefere o trabalho rotineiro.", class: "col-xs-4 col-md-4"%>
+          <%= f.label :thirty_five_routine, "35 - É engenhoso, alguém que gosta de analisar profundamente as coisas.", class: "col-xs-4 col-md-4"%>
           <label class="col-xs-1 col-md-1">
             <%= f.radio_button :thirty_five_routine, 1 %>
             <%= 1 %>
@@ -832,7 +827,7 @@
           </label>
         </li>
         <li class="list-group-item col-xs-12 col-md-12">
-          <%= f.label :thirty_six_friendly, "36 - É sociável, amigável.", class: "col-xs-4 col-md-4"%>
+          <%= f.label :thirty_six_friendly, "36 - Fica nervoso facilmente.", class: "col-xs-4 col-md-4"%>
           <label class="col-xs-1 col-md-1">
             <%= f.radio_button :thirty_six_friendly, 1 %>
             <%= 1 %>
@@ -855,7 +850,7 @@
           </label>
         </li>
         <li class="list-group-item col-xs-12 col-md-12">
-          <%= f.label :thirty_seven_rude, "37 - Por vezes é rude com os outros.", class: "col-xs-4 col-md-4"%>
+          <%= f.label :thirty_seven_rude, "37 - Gera muito entusiasmo.", class: "col-xs-4 col-md-4"%>
           <label class="col-xs-1 col-md-1">
             <%= f.radio_button :thirty_seven_rude, 1 %>
             <%= 1 %>
@@ -878,7 +873,7 @@
           </label>
         </li>
         <li class="list-group-item col-xs-12 col-md-12">
-          <%= f.label :thirty_eight_planner, "38 - Faz planos e cumpre-os.", class: "col-xs-4 col-md-4"%>
+          <%= f.label :thirty_eight_planner, "38 - Tende a ser desorganizado.", class: "col-xs-4 col-md-4"%>
           <label class="col-xs-1 col-md-1">
             <%= f.radio_button :thirty_eight_planner, 1 %>
             <%= 1 %>
@@ -901,7 +896,7 @@
           </label>
         </li>
         <li class="list-group-item col-xs-12 col-md-12">
-          <%= f.label :thirty_nine_easily_nervous, "39 - Fica nervoso facilmente.", class: "col-xs-4 col-md-4"%>
+          <%= f.label :thirty_nine_easily_nervous, "39 - Gosta de refletir, brincar com as idéias.", class: "col-xs-4 col-md-4"%>
           <label class="col-xs-1 col-md-1">
             <%= f.radio_button :thirty_nine_easily_nervous, 1 %>
             <%= 1 %>
@@ -924,7 +919,7 @@
           </label>
         </li>
         <li class="list-group-item col-xs-12 col-md-12">
-          <%= f.label :fourty_like_think, "40 - Gosta de refletir, brincar com as ideias.", class: "col-xs-4 col-md-4"%>
+          <%= f.label :fourty_like_think, "40 - Tem capacidade de perdoar, perdoa fácil.", class: "col-xs-4 col-md-4"%>
           <label class="col-xs-1 col-md-1">
             <%= f.radio_button :fourty_like_think, 1 %>
             <%= 1 %>
@@ -947,7 +942,7 @@
           </label>
         </li>
         <li class="list-group-item col-xs-12 col-md-12">
-          <%= f.label :fourty_one_low_artistic, "41 - Tem poucos interesses artisticos.", class: "col-xs-4 col-md-4"%>
+          <%= f.label :fourty_one_low_artistic, "41 - Preocupa-se muito com tudo.", class: "col-xs-4 col-md-4"%>
           <label class="col-xs-1 col-md-1">
             <%= f.radio_button :fourty_one_low_artistic, 1 %>
             <%= 1 %>
@@ -970,7 +965,7 @@
           </label>
         </li>
         <li class="list-group-item col-xs-12 col-md-12">
-          <%= f.label :fourty_two_cooperative, "42 - Gosta de cooperar com os outros.", class: "col-xs-4 col-md-4"%>
+          <%= f.label :fourty_two_cooperative, "42 - Tende a ser quieto, calado.", class: "col-xs-4 col-md-4"%>
           <label class="col-xs-1 col-md-1">
             <%= f.radio_button :fourty_two_cooperative, 1 %>
             <%= 1 %>
@@ -993,7 +988,7 @@
           </label>
         </li>
         <li class="list-group-item col-xs-12 col-md-12">
-          <%= f.label :fourty_three_distractive, "43 - Se distrai com facilidade.", class: "col-xs-4 col-md-4"%>
+          <%= f.label :fourty_three_distractive, "43 - Tem poucos interesses artísticos", class: "col-xs-4 col-md-4"%>
           <label class="col-xs-1 col-md-1">
             <%= f.radio_button :fourty_three_distractive, 1 %>
             <%= 1 %>
@@ -1016,7 +1011,7 @@
           </label>
         </li>
         <li class="list-group-item col-xs-12 col-md-12">
-          <%= f.label :fourty_four_sofisticated, "44 - É sofisticado(a) na arte, música ou literatura.", class: "col-xs-4 col-md-4"%>
+          <%= f.label :fourty_four_sofisticated, "44 - É sofisticado em artes, música ou literatura.", class: "col-xs-4 col-md-4"%>
           <label class="col-xs-1 col-md-1">
             <%= f.radio_button :fourty_four_sofisticated, 1 %>
             <%= 1 %>

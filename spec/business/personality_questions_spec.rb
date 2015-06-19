@@ -17,10 +17,10 @@ describe 'PersonalityScoring' do
 
   describe "#count" do
     let(:personality_questions){
-      PersonalityQuestion.new(one_speaker: 5, six_quiet: 3, eleven_energy: 4,
-        sixteen_enthusiastic: 2, twenty_one_calm: 1,
-        twenty_six_assertive: 2, thirty_one_shy: 5,
-        thirty_six_friendly: 3
+      PersonalityQuestion.new(one_speaker: 5, five_original: 3, twelve_fighter: 4,
+        sixteen_enthusiastic: 2, twenty_six_assertive: 1,
+        twenty_nine_instable: 2, thirty_seven_rude: 5,
+        fourty_two_cooperative: 3
       )
     }
 
