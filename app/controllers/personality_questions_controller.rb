@@ -1,7 +1,6 @@
 class PersonalityQuestionsController < ApplicationController
 
   def new
-    @user = current_user
     @personality_questions = PersonalityQuestion.new
   end
 
@@ -21,7 +20,6 @@ class PersonalityQuestionsController < ApplicationController
   end
 
   def index
-    @user = current_user
     @personalities = UserPersonality.find_by(user_id: current_user.id)
   end
 
