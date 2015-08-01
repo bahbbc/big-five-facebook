@@ -1,5 +1,4 @@
 class User < ActiveRecord::Base
-
   def self.from_omniauth(auth)
     first_or_initialize.tap do |user|
       user.link = auth['extra']['raw_info']['link'],

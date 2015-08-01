@@ -7,8 +7,9 @@ class PersonalityQuestionsController < ApplicationController
     @personality_questions = PersonalityQuestion.new(personality_questions_params)
     if @personality_questions.save
       user_posts
-      score = PersonalityCalculator.new(@personality_questions).calculate
-      user_personality_create(score)
+      user_personality_create(
+        PersonalityCalculator.new(@personality_questions).calculate
+      )
       redirect_to :personality_questions
     else
       render :new
@@ -35,17 +36,17 @@ class PersonalityQuestionsController < ApplicationController
 
   private
 
-  def user_personality
-    @user_personality ||= UserPersonality.find_by(user_id: current_user.id)
-  end
-
   def user_posts
     user_personality.koala(current_user.token)
   end
 
+  def user_personality
+    @user_personality ||= UserPersonality.where(user_id: current_user.id).first_or_initialize
+  end
+
   def user_personality_create(score)
-    UserPersonality.create(
-      user_id: current_user.id, extraversion: score[:extraversion],
+    user_personality.save(
+      extraversion: score[:extraversion],
       agreeableness: score[:agreeableness],
       conscientiousness: score[:conscientiousness],
       neuroticism: score[:neuroticism],
