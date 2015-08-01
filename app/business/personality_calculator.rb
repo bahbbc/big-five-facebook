@@ -13,5 +13,4 @@ class PersonalityCalculator
       openness: Openness.new(@personality_questions).personality
     }
   end
-
 end

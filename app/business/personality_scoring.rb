@@ -1,11 +1,10 @@
 module PersonalityScoring
-
   def compute(questions)
     sum = 0
     questions.each do |question|
       sum += question
     end
-    sum/questions.length
+    sum / questions.length
   end
 
   def reverse_count(question)
