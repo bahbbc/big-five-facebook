@@ -6,6 +6,7 @@ class PersonalityQuestionsController < ApplicationController
   def create
     @personality_questions = PersonalityQuestion.new(personality_questions_params)
     if @personality_questions.save
+      user_posts
       score = PersonalityCalculator.new(@personality_questions).calculate
       user_personality_create(score)
       redirect_to :personality_questions
@@ -14,17 +15,8 @@ class PersonalityQuestionsController < ApplicationController
     end
   end
 
-  def user_personality_create(score)
-    UserPersonality.create(
-      user_id: current_user.id, extraversion: score[:extraversion],
-      agreeableness: score[:agreeableness],
-      conscientiousness: score[:conscientiousness],
-      neuroticism: score[:neuroticism],
-      openness: score[:openness])
-  end
-
   def index
-    @personalities = UserPersonality.find_by(user_id: current_user.id)
+    @personalities = user_personality
   end
 
   def personality_questions_params
@@ -39,5 +31,24 @@ class PersonalityQuestionsController < ApplicationController
               :thirty_six_friendly, :thirty_seven_rude, :thirty_eight_planner, :thirty_nine_easily_nervous,
               :fourty_like_think, :fourty_one_low_artistic, :fourty_two_cooperative, :fourty_three_distractive,
               :fourty_four_sofisticated)
+  end
+
+  private
+
+  def user_personality
+    @user_personality ||= UserPersonality.find_by(user_id: current_user.id)
+  end
+
+  def user_posts
+    user_personality.koala(current_user.token)
+  end
+
+  def user_personality_create(score)
+    UserPersonality.create(
+      user_id: current_user.id, extraversion: score[:extraversion],
+      agreeableness: score[:agreeableness],
+      conscientiousness: score[:conscientiousness],
+      neuroticism: score[:neuroticism],
+      openness: score[:openness])
   end
 end
