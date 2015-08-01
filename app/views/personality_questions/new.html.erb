@@ -6,7 +6,6 @@
         <br>
         Escolha o número que corresponde ao grau em que acredita que a frase te caracteriza.
         <br>
-        Sendo 1 = Discorto totalmente, 2 = Discordo parcialmente, 3 = Não concordo nem discorto, 4 = Concordo parcialmente, 5 = Concordo totalmente
       </div>
       <% if @personality_questions.errors.any? %>
         <div id="error_explanation" class="alert alert-danger">
@@ -20,7 +19,7 @@
     </div>
     <%= simple_form_for @personality_questions, url: personality_questions_path, class: "navbar-form navbar-left" do |f| %>
     <div class="form-group container-fluid">
-      <div class="panel-title">1 = Discorto totalmente, 2 = Discordo parcialmente, 3 = Não concordo nem discorto, 4 = Concordo parcialmente, 5 = Concordo totalmente</div>
+      <div class="panel-title col-xs-offset-1 col-md-offset-1">1 = Discorto totalmente, 2 = Discordo parcialmente, 3 = Não concordo nem discorto, 4 = Concordo parcialmente, 5 = Concordo totalmente</div>
       <ul class = "list-group">
         <li class="list-group-item col-xs-12 col-md-12">
           <%= f.label :one_speaker, "1 - É conversador, comunicativo.", class: "col-xs-4 col-md-4"%>
