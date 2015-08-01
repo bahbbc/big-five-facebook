@@ -1,12 +1,12 @@
-<%= render 'shared/jumbotron_header' %>
 <div class="container">
   <div class="row">
     <div class='col-xs-12 col-md-12'>
-      <p>Responda as perguntas a seguir em termos de quem você realmente é, e não de quem <b>você gostaria de ser</b> no futuro</p>
-      <p>Neste questionário, não existem <b>respostas certas nem erradas</b>. Quanto mais sinceras forem as suas respostas e melhor você se conhecer mais exato será o questionário.</p>
+      <p> Este aplicativo é parte da minha pesquisa de mestrado na USP-EACH, e permite identificar os principais traços da sua personalidade.</p>
+      <p> Para utilizá-lo, você deve responder 44 perguntas da forma mais sincera possível, <strong> pensando em como você realmente é hoje </strong>, e não como gostaria de ser.
+      <p> A exatidão da sua resposta é importante não apenas para que os resultados sejam corretos, mas também para que sejam úteis para a minha pesquisa</p>
       <p>Ao prosseguir você concorda com a <%= link_to 'política de uso', 'https://drive.google.com/file/d/0B74E7opJ4nWccDBCM0xUYnpKdUU/view?usp=sharing', target: '_blank' %> e os <%= link_to 'termos dessa pesquisa', 'https://drive.google.com/file/d/0B74E7opJ4nWca09VMUR4QndoSlU/view?usp=sharing', target: '_blank' %>.</p>
       <%= link_to '/auth/facebook', class: 'btn btn-success col-md-offset-10' do %>
-        Prosseguir <i class='glyphicon glyphicon-chevron-right'></i>
+        Concordo <i class='glyphicon glyphicon-chevron-right'></i>
       <% end %>
     </div>
   </div>
