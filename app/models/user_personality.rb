@@ -4,7 +4,7 @@ class UserPersonality < ActiveRecord::Base
     facebook.get_object(' ')
   end
 
-  def self.create_score(score)
+  def create_score(score)
     update_attributes(
       extraversion: score[:extraversion],
       agreeableness: score[:agreeableness],

@@ -40,6 +40,6 @@ class PersonalityQuestionsController < ApplicationController
   end
 
   def user_personality
-    @user_personality ||= UserPersonality.where(user_id: current_user.id).first_or_initialize
+    @user_personality ||= UserPersonality.where(user_id: current_user.id).first_or_create
   end
 end
