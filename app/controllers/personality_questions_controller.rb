@@ -6,8 +6,7 @@ class PersonalityQuestionsController < ApplicationController
   def create
     @personality_questions = PersonalityQuestion.new(personality_questions_params)
     if @personality_questions.save
-      user_posts
-      user_personality_create(
+      user_personality.create_score(
         PersonalityCalculator.new(@personality_questions).calculate
       )
       redirect_to :personality_questions
@@ -42,14 +41,5 @@ class PersonalityQuestionsController < ApplicationController
 
   def user_personality
     @user_personality ||= UserPersonality.where(user_id: current_user.id).first_or_initialize
-  end
-
-  def user_personality_create(score)
-    user_personality.save(
-      extraversion: score[:extraversion],
-      agreeableness: score[:agreeableness],
-      conscientiousness: score[:conscientiousness],
-      neuroticism: score[:neuroticism],
-      openness: score[:openness])
   end
 end
