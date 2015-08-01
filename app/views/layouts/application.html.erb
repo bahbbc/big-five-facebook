@@ -15,8 +15,7 @@
   js.src = "//connect.facebook.net/pt_BR/sdk.js#xfbml=1&version=v2.3&appId=821480091234293";
   fjs.parentNode.insertBefore(js, fjs);
 }(document, 'script', 'facebook-jssdk'));</script>
-<%= render 'shared/jumbotron_header' %>
-<%= yield %>
-<%= render 'shared/footer' %>
+<%= render 'layouts/header' %>
+  <%= yield %>
 </body>
 </html>

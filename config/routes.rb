@@ -3,7 +3,8 @@ Rails.application.routes.draw do
   get 'auth/facebook', as: 'auth_provider'
   get 'auth/facebook/callback', to: 'sessions#create'
 
-  get 'user_police', to: 'home#user_police', as: 'user_police'
+  get 'user_policy', to: 'home#user_policy', as: 'user_policy'
+  get 'research_terms', to: 'home#research_terms', as: 'research_terms'
 
   resources :personality_questions, only: [:index, :new, :create, :show]
 end
