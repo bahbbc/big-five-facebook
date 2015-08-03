@@ -35,10 +35,6 @@ class PersonalityQuestionsController < ApplicationController
 
   private
 
-  def user_posts
-    user_personality.koala(current_user.token)
-  end
-
   def user_personality
     @user_personality ||= UserPersonality.where(user_id: current_user.id).first_or_create
   end

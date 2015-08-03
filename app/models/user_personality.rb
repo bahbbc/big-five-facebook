@@ -1,9 +1,4 @@
 class UserPersonality < ActiveRecord::Base
-  def self.koala(access_token)
-    facebook = Koala::Facebook::API.new(access_token)
-    facebook.get_object(' ')
-  end
-
   def create_score(score)
     update_attributes(
       extraversion: score[:extraversion],
