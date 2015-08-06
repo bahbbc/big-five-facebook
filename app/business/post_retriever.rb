@@ -11,8 +11,7 @@ class PostRetriever
   end
 
   def create
-    binding.pry
-    posts = JSON.parse(user_post)
+    posts = JSON.parse(user_post.body)['posts']['data']
     posts.each do |post|
       Post.create(
         user_id: @user.id,
