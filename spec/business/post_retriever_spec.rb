@@ -21,7 +21,7 @@ describe PostRetriever do
     end
 
     it 'creates a post' do
-      expect { described_class.new(user).create }.to change { Post.count }
+      expect { described_class.new(user).create }.to change { Post.count }.by(1)
     end
   end
 end
