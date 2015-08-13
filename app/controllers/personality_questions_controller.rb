@@ -1,6 +1,5 @@
 class PersonalityQuestionsController < ApplicationController
   def new
-    PostRetriever.new(current_user).create
     @personality_questions = PersonalityQuestion.new
   end
 
