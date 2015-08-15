@@ -8,6 +8,6 @@ class ApplicationController < ActionController::Base
   private
 
   def current_user
-    @current_user ||= User.find_by(token: session[:user_token]) if session[:user_token]
+    @current_user = User.find_by(token: session[:user_token]) if session[:user_token]
   end
 end
