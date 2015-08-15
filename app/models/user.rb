@@ -9,7 +9,6 @@ class User < ActiveRecord::Base
       user.nickname = auth['info']['name'],
       user.email = auth['info']['email'],
       user.expires_at = Time.at(auth['credentials']['expires_at']),
-      user.facebook_id = auth['extra']['raw_info']['id']
       user.save!
     end
   end
