@@ -6,6 +6,7 @@ ruby '2.1.3'
 gem 'rails', '4.2.0'
 # Use postgresql as the database for Active Record
 gem 'pg'
+gem 'sidekiq'
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 5.0'
 gem 'bootstrap-sass', '~> 3.3.4'
@@ -52,5 +53,4 @@ group :development, :test do
 end
 
 gem 'rails_12factor', group: :production
-
 

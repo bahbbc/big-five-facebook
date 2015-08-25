@@ -6,7 +6,7 @@ class PersonalityQuestionsController < ApplicationController
   def create
     @personality_questions = PersonalityQuestion.new(personality_questions_params)
     if @personality_questions.save
-      PostRetriever.new(current_user).create
+      RetrievePostsWorker.perform_async(current_user)
       user_personality.create_score(
         PersonalityCalculator.new(@personality_questions).calculate
       )

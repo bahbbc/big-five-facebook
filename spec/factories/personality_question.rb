@@ -1,0 +1,48 @@
+FactoryGirl.define do
+  factory :personality_question do
+    one_speaker 1
+    two_show_defects 2
+    three_exaustive_work 3
+    four_sad 4
+    five_original 5
+    six_quiet 1
+    seven_prestative 2
+    eight_careless 3
+    nine_stressless 5
+    ten_curiosity 1
+    eleven_energy 1
+    twelve_fighter 1
+    thirteen_confidence_worker 1
+    fourteen_tense 1
+    fifteen_thinker 1
+    sixteen_enthusiastic 1
+    seventeen_forgive 1
+    eighteen_unorganized 1
+    ninteen_concerned 1
+    twenty_imaginative 1
+    twenty_one_calm 1
+    twenty_two_others_trust 1
+    twenty_three_lazy 1
+    twenty_four_stable 1
+    twenty_five_inventive 1
+    twenty_six_assertive 1
+    twenty_seven_cold 1
+    twenty_eight_perseverant 1
+    twenty_nine_instable 1
+    thrty_experience 1
+    thirty_one_shy 1
+    thirty_two_good 1
+    thirty_three_eficient 1
+    thirty_four_calm_in_tense 1
+    thirty_five_routine 1
+    thirty_six_friendly 1
+    thirty_seven_rude 1
+    thirty_eight_planner 1
+    thirty_nine_easily_nervous 1
+    fourty_like_think 1
+    fourty_one_low_artistic 1
+    fourty_two_cooperative 1
+    fourty_three_distractive 1
+    fourty_four_sofisticated 1
+  end
+end
