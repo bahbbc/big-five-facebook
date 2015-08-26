@@ -1,5 +1,3 @@
-require 'sidekiq/web'
-
 if Rails.env.production?
   uri = URI.parse(ENV["REDISTOGO_URL"])
 
