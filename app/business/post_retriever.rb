@@ -9,6 +9,6 @@ class PostRetriever
   end
 
   def create
-    Post.create({posts: user_post.body, user: @user})
+    Post.create({posts: user_post.body, user_id: @user.id})
   end
 end
