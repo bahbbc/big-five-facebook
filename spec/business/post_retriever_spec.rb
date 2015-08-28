@@ -21,5 +21,10 @@ describe PostRetriever do
     it 'creates a post' do
       expect { described_class.new(user).create }.to change { Post.count }.by(1)
     end
+
+    it 'saves the whole json' do
+      described_class.new(user).create
+      expect(Post.first.posts).to eql JSON.parse(facebook_posts)
+    end
   end
 end

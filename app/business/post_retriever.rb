@@ -9,13 +9,6 @@ class PostRetriever
   end
 
   def create
-    posts = JSON.parse(user_post.body)['data']
-    posts.each do |post|
-      Post.create(
-        user_id: @user.id,
-        message: post['message'],
-        created_time: post['created_time']
-      ) if post['message']
-    end
+    Post.create({posts: user_post.body})
   end
 end
