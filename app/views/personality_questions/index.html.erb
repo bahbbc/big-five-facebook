@@ -8,51 +8,51 @@
   <div class="col-xs-12 col-md-12">
     <div class="progress">
       <div class="progress-bar progress-bar-success progress-bar" role="progressbar" aria-valuenow="<%= @personalities.agreeableness %>" aria-valuemin="0" aria-valuemax="100" style="width: <%= @personalities.agreeableness * 20 %>%">
-        Independente
+        Agradável
         <span class="sr-only"><%= @personalities.agreeableness %></span>
       </div>
       <div class="progress-bar" role="progressbar" aria-valuenow="<%= @personalities.agreeableness %>" aria-valuemin="0" aria-valuemax="100" style="background-color: #91cf91; width: <%= 100 - (@personalities.agreeableness * 20) %>%">
-        Agradável
+        Independente
         <span class="sr-only"><%= @personalities.agreeableness %></span>
       </div>
     </div>
     <div class="progress">
       <div class="progress-bar progress-bar-info progress-bar" role="progressbar" aria-valuenow="<%= @personalities.conscientiousness %>" aria-valuemin="0" aria-valuemax="100" style="width: <%= @personalities.conscientiousness * 20 %>%">
-        Bagunceiro
+        Meticuloso
         <span class="sr-only"><%= @personalities.conscientiousness %></span>
       </div>
       <div class="progress-bar" role="progressbar" aria-valuenow="<%= @personalities.conscientiousness %>" aria-valuemin="0" aria-valuemax="100" style="background-color: #9bd8eb; width: <%= 100 - (@personalities.conscientiousness * 20) %>%">
-        Meticuloso
+        Bagunceiro
         <span class="sr-only"><%= @personalities.conscientiousness %></span>
       </div>
     </div>
     <div class="progress">
       <div class="progress-bar progress-bar-warning progress-bar" role="progressbar" aria-valuenow="<%= @personalities.extraversion %>" aria-valuemin="0" aria-valuemax="100" style="width: <%= @personalities.extraversion * 20 %>%">
-        Introvertido
+        Extrovertido
         <span class="sr-only"><%= @personalities.extraversion %></span>
       </div>
       <div class="progress-bar" role="progressbar" aria-valuenow="<%= @personalities.extraversion %>" aria-valuemin="0" aria-valuemax="100" style="background-color: #f6ce95; width: <%= 100 - (@personalities.extraversion * 20) %>%">
-        Extrovertido
+        Introvertido
         <span class="sr-only"><%= @personalities.extraversion %></span>
       </div>
     </div>
     <div class="progress">
       <div class="progress-bar progress-bar-danger progress-bar" role="progressbar" aria-valuenow="<%= @personalities.neuroticism %>" aria-valuemin="0" aria-valuemax="100" style="width: <%= @personalities.neuroticism * 20 %>%">
-        Constante
+        Instável
         <span class="sr-only"><%= @personalities.neuroticism %></span>
       </div>
       <div class="progress-bar" role="progressbar" aria-valuenow="<%= @personalities.neuroticism %>" aria-valuemin="0" aria-valuemax="100" style="background-color: #e7908e; width: <%= 100 - (@personalities.neuroticism * 20) %>%">
-        Instável
+        Constante
         <span class="sr-only"><%= @personalities.neuroticism %></span>
       </div>
     </div>
     <div class="progress">
       <div class="progress-bar" role="progressbar" aria-valuenow="<%= @personalities.openness %>" aria-valuemin="0" aria-valuemax="100" style="width: <%= @personalities.openness * 20 %>%">
-        Conservador
+        Liberal
         <span class="sr-only"><%= @personalities.openness %></span>
       </div>
       <div class="progress-bar" role="progressbar" aria-valuenow="<%= @personalities.openness %>" aria-valuemin="0" aria-valuemax="100" style="background-color: #63a0d4; width: <%= 100 - (@personalities.openness * 20) %>%">
-        Liberal
+        Conservador
         <span class="sr-only"><%= @personalities.openness %></span>
       </div>
     </div>
