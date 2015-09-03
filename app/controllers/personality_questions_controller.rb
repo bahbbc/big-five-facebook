@@ -1,6 +1,13 @@
 class PersonalityQuestionsController < ApplicationController
   def new
-    @personality_questions = PersonalityQuestion.new
+    if posts?
+      @personality_questions = PersonalityQuestion.new
+    else
+      render :missing_permission
+    end
+  end
+
+  def missing_permission
   end
 
   def create
@@ -35,6 +42,10 @@ class PersonalityQuestionsController < ApplicationController
   end
 
   private
+
+  def posts?
+    PostRetriever.new(current_user).user_post.body.any?
+  end
 
   def user_personality
     @user_personality ||= UserPersonality.where(user_id: current_user.id).first_or_create
