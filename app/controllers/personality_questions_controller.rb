@@ -1,7 +1,7 @@
 class PersonalityQuestionsController < ApplicationController
   def new
     if error?
-      render :missing_permission
+      redirect_to :auth_provider
     else
       @personality_questions = PersonalityQuestion.new
     end
