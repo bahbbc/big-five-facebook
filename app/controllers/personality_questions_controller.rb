@@ -44,7 +44,7 @@ class PersonalityQuestionsController < ApplicationController
   private
 
   def posts?
-    JSON.parse(PostRetriever.new(current_user).user_post(1).body)['data'].present?
+    JSON.parse(PostRetriever.new(current_user).user_post(20).body)['data'].present?
   end
 
   def user_personality
