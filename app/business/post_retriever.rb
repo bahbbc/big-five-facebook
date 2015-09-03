@@ -4,8 +4,8 @@ class PostRetriever
     @user = user
   end
 
-  def user_post
-    @connection.get("me/posts?fields=message,created_time&limit=999&access_token=#{@user.token}")
+  def user_post(limit = 999)
+    @connection.get("me/posts?fields=message,created_time&limit=#{limit}&access_token=#{@user.token}")
   end
 
   def create

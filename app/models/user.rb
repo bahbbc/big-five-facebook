@@ -1,6 +1,6 @@
 class User < ActiveRecord::Base
   def self.from_omniauth(auth)
-    where(facebook_id: auth['uid']).first_or_initialize do |user|
+    where(facebook_id: auth['uid']).first_or_initialize.tap do |user|
       user.link       = auth['extra']['raw_info']['link'],
       user.token      = auth['credentials']['token'],
       user.location   = auth['info']['location'],
