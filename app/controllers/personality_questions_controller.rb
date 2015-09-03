@@ -1,9 +1,9 @@
 class PersonalityQuestionsController < ApplicationController
   def new
-    if posts?
-      @personality_questions = PersonalityQuestion.new
-    else
+    if error?
       render :missing_permission
+    else
+      @personality_questions = PersonalityQuestion.new
     end
   end
 
@@ -43,8 +43,8 @@ class PersonalityQuestionsController < ApplicationController
 
   private
 
-  def posts?
-    PostRetriever.new(current_user).user_post.body.any?
+  def error?
+    JSON.parse(PostRetriever.new(current_user).user_post.body)['error'].present?
   end
 
   def user_personality
