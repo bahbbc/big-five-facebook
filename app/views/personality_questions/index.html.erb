@@ -2,61 +2,102 @@
   <div class="row">
     <div class="col-xs-12 col-md-12">
       <p>Parabéns, <%= current_user.name %>! Você completou o teste!</p>
+      <p>A esquerda estão os traços principais do Big-5, e a direita os traços 'reversos'.</p>
     </div>
   </div>
 
   <div class="col-xs-12 col-md-12">
     <div class="progress">
-      <div class="progress-bar progress-bar-success progress-bar" role="progressbar" aria-valuenow="<%= @personalities.agreeableness %>" aria-valuemin="0" aria-valuemax="100" style="width: <%= @personalities.agreeableness * 20 %>%">
-        Agradável
+      <div class="progress-bar progress-bar-success progress-bar" role="progressbar" aria-valuenow="<%= @personalities.agreeableness %>" aria-valuemin="0" aria-valuemax="100" style="width: <%= trait_percentage(@personalities, 'agreeableness') %>%">
+        <%= "#{trait_percentage(@personalities, 'agreeableness')}% Agradável " %>
         <span class="sr-only"><%= @personalities.agreeableness %></span>
       </div>
-      <div class="progress-bar" role="progressbar" aria-valuenow="<%= @personalities.agreeableness %>" aria-valuemin="0" aria-valuemax="100" style="background-color: #91cf91; width: <%= 100 - (@personalities.agreeableness * 20) %>%">
-        Independente
+      <div class="progress-bar" role="progressbar" aria-valuenow="<%= @personalities.agreeableness %>" aria-valuemin="0" aria-valuemax="100" style="background-color: #91cf91; width: <%= trait_percentage(@personalities, 'agreeableness', true) %>%">
+        <%= "#{trait_percentage(@personalities, 'agreeableness', true)}% Independente" %>
         <span class="sr-only"><%= @personalities.agreeableness %></span>
       </div>
     </div>
     <div class="progress">
-      <div class="progress-bar progress-bar-info progress-bar" role="progressbar" aria-valuenow="<%= @personalities.conscientiousness %>" aria-valuemin="0" aria-valuemax="100" style="width: <%= @personalities.conscientiousness * 20 %>%">
-        Meticuloso
+      <div class="progress-bar progress-bar-info progress-bar" role="progressbar" aria-valuenow="<%= @personalities.conscientiousness %>" aria-valuemin="0" aria-valuemax="100" style="width: <%= trait_percentage(@personalities, 'conscientiousness') %>%">
+        <%= "#{trait_percentage(@personalities, 'conscientiousness')}% Meticuloso" %>
         <span class="sr-only"><%= @personalities.conscientiousness %></span>
       </div>
-      <div class="progress-bar" role="progressbar" aria-valuenow="<%= @personalities.conscientiousness %>" aria-valuemin="0" aria-valuemax="100" style="background-color: #9bd8eb; width: <%= 100 - (@personalities.conscientiousness * 20) %>%">
-        Bagunceiro
+      <div class="progress-bar" role="progressbar" aria-valuenow="<%= @personalities.conscientiousness %>" aria-valuemin="0" aria-valuemax="100" style="background-color: #9bd8eb; width: <%= trait_percentage(@personalities, 'conscientiousness', true) %>%">
+        <%= "#{trait_percentage(@personalities, 'conscientiousness', true)}% Bagunceiro" %>
         <span class="sr-only"><%= @personalities.conscientiousness %></span>
       </div>
     </div>
     <div class="progress">
-      <div class="progress-bar progress-bar-warning progress-bar" role="progressbar" aria-valuenow="<%= @personalities.extraversion %>" aria-valuemin="0" aria-valuemax="100" style="width: <%= @personalities.extraversion * 20 %>%">
-        Extrovertido
+      <div class="progress-bar progress-bar-warning progress-bar" role="progressbar" aria-valuenow="<%= @personalities.extraversion %>" aria-valuemin="0" aria-valuemax="100" style="width: <%= trait_percentage(@personalities, 'extraversion') %>%">
+        <%= "#{trait_percentage(@personalities, 'extraversion')}% Extrovertido" %>
         <span class="sr-only"><%= @personalities.extraversion %></span>
       </div>
-      <div class="progress-bar" role="progressbar" aria-valuenow="<%= @personalities.extraversion %>" aria-valuemin="0" aria-valuemax="100" style="background-color: #f6ce95; width: <%= 100 - (@personalities.extraversion * 20) %>%">
-        Introvertido
+      <div class="progress-bar" role="progressbar" aria-valuenow="<%= @personalities.extraversion %>" aria-valuemin="0" aria-valuemax="100" style="background-color: #f6ce95; width: <%= trait_percentage(@personalities, 'extraversion', true) %>%">
+        <%= "#{trait_percentage(@personalities, 'extraversion', true)}% Introvertido" %>
         <span class="sr-only"><%= @personalities.extraversion %></span>
       </div>
     </div>
     <div class="progress">
-      <div class="progress-bar progress-bar-danger progress-bar" role="progressbar" aria-valuenow="<%= @personalities.neuroticism %>" aria-valuemin="0" aria-valuemax="100" style="width: <%= @personalities.neuroticism * 20 %>%">
-        Instável
+      <div class="progress-bar progress-bar-danger progress-bar" role="progressbar" aria-valuenow="<%= @personalities.neuroticism %>" aria-valuemin="0" aria-valuemax="100" style="width: <%= trait_percentage(@personalities, 'neuroticism') %>%">
+        <%= "#{trait_percentage(@personalities, 'conscientiousness')}% Instável" %>
         <span class="sr-only"><%= @personalities.neuroticism %></span>
       </div>
-      <div class="progress-bar" role="progressbar" aria-valuenow="<%= @personalities.neuroticism %>" aria-valuemin="0" aria-valuemax="100" style="background-color: #e7908e; width: <%= 100 - (@personalities.neuroticism * 20) %>%">
-        Constante
+      <div class="progress-bar" role="progressbar" aria-valuenow="<%= @personalities.neuroticism %>" aria-valuemin="0" aria-valuemax="100" style="background-color: #e7908e; width: <%= trait_percentage(@personalities, 'neuroticism', true) %>%">
+        <%= "#{trait_percentage(@personalities, 'conscientiousness', true)}% Constante" %>
         <span class="sr-only"><%= @personalities.neuroticism %></span>
       </div>
     </div>
     <div class="progress">
-      <div class="progress-bar" role="progressbar" aria-valuenow="<%= @personalities.openness %>" aria-valuemin="0" aria-valuemax="100" style="width: <%= @personalities.openness * 20 %>%">
-        Liberal
+      <div class="progress-bar" role="progressbar" aria-valuenow="<%= @personalities.openness %>" aria-valuemin="0" aria-valuemax="100" style="width: <%= trait_percentage(@personalities, 'openness') %>%">
+        <%= "#{trait_percentage(@personalities, 'conscientiousness')}% Liberal" %>
         <span class="sr-only"><%= @personalities.openness %></span>
       </div>
-      <div class="progress-bar" role="progressbar" aria-valuenow="<%= @personalities.openness %>" aria-valuemin="0" aria-valuemax="100" style="background-color: #63a0d4; width: <%= 100 - (@personalities.openness * 20) %>%">
-        Conservador
+      <div class="progress-bar" role="progressbar" aria-valuenow="<%= @personalities.openness %>" aria-valuemin="0" aria-valuemax="100" style="background-color: #63a0d4; width: <%= trait_percentage(@personalities, 'openness', true) %>%">
+        <%= "#{trait_percentage(@personalities, 'conscientiousness', true)}% Conservador" %>
         <span class="sr-only"><%= @personalities.openness %></span>
       </div>
     </div>
   </div>
-  <p>Por favor, compartilhe esse teste no seu facebook para ajudar a minha pesquisa =)</p>
+  <p>Por favor, compartilhe esse teste no seu facebook ou peça para as pessoas responderam para ajudar ainda mais na pesquisa. =)</p>
   <div class="fb-share-button" data-href="https://teste-personalidade.herokuapp.com" data-layout="button_count"></div>
+  <div>
+    <h3>Uma breve explicação sobre cada traço principal</h3>
+    <br>
+    <div class="alert alert-success">
+      <strong>Agradável</strong>
+      <p>Agradabilidade é a tendência para ser compassivo e cooperante em vez de suspeitoso e antagonista face aos outros. Este traço reflete diferenças individuais na preocupação com a harmonia social.
+         Indivíduos "agradáveis" ou "amáveis" valorizam a boa relação com os outros. Eles são geralmente respeitosos, amigáveis, generosos, prestáveis e dispostos a fazer compromissos. Pessoas "agradáveis" têm também uma visão otimista da natureza humana.
+         Elas acreditam que as pessoas são basicamente honestas, decentes e dignas de confiança.Indivíduos "não-amigáveis" ou mais independentes põem o interesse próprio acima da boa relação com os outros.
+         Eles normalmente não se preocupam com o bem-estar dos outros, e por vezes o seu ceticismo acerca dos motivos dos outros fá-los ser desconfiados e pouco cooperativos.</p>
+    </div>
+
+    <div class="alert alert-info">
+      <strong>Meticuloso</strong>
+      <p>Meticulosidade é a tendência para mostrar autodisciplina, orientação para os deveres e para atingir os objetivos. Este traço mostra uma preferência pelo comportamento planejado em vez do espontâneo.
+         Influencia a maneira como controlamos e dirigimos os nossos impulsos.</p>
+    </div>
+
+    <div class="alert alert-warning">
+      <strong>Extrovertido</strong>
+      <p>Extroversão é caracterizada por emoções positivas e pela tendência para procurar estimulação e a companhia dos outros. Este traço é marcado pelo profundo envolvimento com o mundo exterior.
+         Os extrovertidos gostam de estar com pessoas, e são usualmente vistos como sendo cheios de energia. Eles tendem a ser indivíduos entusiasmados, que provavelmente dizem "Sim!"" ou "Vamos nessa!" perante oportunidades que trazem algum contentamento.
+         Em grupos eles tendem a ser faladores, assertivos e a chamar as atenções para sí. Os introvertidos não têm a exuberância social e os níveis de atividade dos extrovertidos. Eles tendem a parecer calmos, ponderados e menos envolvidos com o mundo social.
+         A sua falta de envolvimento social não deve ser interpretada como timidez ou depressão. Os introvertidos simplesmente necessitam de menos estimulação e de mais tempo sozinhos do que os extrovertidos. Eles podem ser bastante ativos e enérgicos, mas não socialmente.</p>
+    </div>
+
+    <div class="alert alert-danger">
+      <strong>Instável</strong>
+      <p>Instabilidade é a tendência para experimentar emoções negativas, como raiva, ansiedade ou depressão. Por vezes é chamada de neuroticismo. Aqueles com um grau elevado de instabilidade são emocionalmente reativos e vulneráveis ao stress.
+         Eles são mais predispostos a interpretar situações normais como sendo ameaçadores, e pequenas frustrações como dificuldades sem esperança. As suas reacções emocionais negativas tendem a persistir por períodos invulgarmente longos, o que significa que eles estão usualmente com má disposição.
+        Esses problemas na regulação emocional podem diminuir a capacidades dessas pessoas para pensar claramente, tomar decisões e lidar de forma apropriada com o stress. No outro extremo da escala, indivíduos com baixa instabilidade são mais difíceis de serem perturbados e
+        são menos reativos emocionalmente. Eles tendem a ser calmos, emocionalmente estáveis, e livres de sentimentos negativos persistentes; no entanto, a escassez de sentimentos negativos não significa necessariamente que estes indivíduos experimentem muitos sentimentos positivos.</p>
+    </div>
+
+    <div class="breadcrumb">
+      <strong>Liberal</strong>
+      <p>Liberal é o interesse pela arte, emoção, aventura, ideias fora do comum, imaginação, curiosidade, e variedade de experiências. Este traço distingue as pessoas imaginativas das "pé no chão" e convencionais. As pessoas com esse traço elevado são intelectualmente curiosas, apreciadoras da arte,
+         e sensíveis à beleza. Elas tendem a ser, comparadas com as pessoas "conservadoras", mais criativas, a prestar mais atenção aos seus sentimentos e a terem opiniões não convencionais. As pessoas com baixo grau do traço liberal tendem a ter interesses mais convencionais e tradicionais.
+         Elas preferem o simples, claro e óbvio ao complexo, ambíguo e sutil. Elas podem ver as artes e as ciências com suspeita ou achá-las desinteressantes.</p>
+    </div>
+  </div>
 </div>
