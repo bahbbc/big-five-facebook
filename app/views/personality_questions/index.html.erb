@@ -39,21 +39,21 @@
     </div>
     <div class="progress">
       <div class="progress-bar progress-bar-danger progress-bar" role="progressbar" aria-valuenow="<%= @personalities.neuroticism %>" aria-valuemin="0" aria-valuemax="100" style="width: <%= trait_percentage(@personalities, 'neuroticism') %>%">
-        <%= "#{trait_percentage(@personalities, 'conscientiousness')}% Instável" %>
+        <%= "#{trait_percentage(@personalities, 'neuroticism')}% Instável" %>
         <span class="sr-only"><%= @personalities.neuroticism %></span>
       </div>
       <div class="progress-bar" role="progressbar" aria-valuenow="<%= @personalities.neuroticism %>" aria-valuemin="0" aria-valuemax="100" style="background-color: #e7908e; width: <%= trait_percentage(@personalities, 'neuroticism', true) %>%">
-        <%= "#{trait_percentage(@personalities, 'conscientiousness', true)}% Constante" %>
+        <%= "#{trait_percentage(@personalities, 'neuroticism', true)}% Constante" %>
         <span class="sr-only"><%= @personalities.neuroticism %></span>
       </div>
     </div>
     <div class="progress">
       <div class="progress-bar" role="progressbar" aria-valuenow="<%= @personalities.openness %>" aria-valuemin="0" aria-valuemax="100" style="width: <%= trait_percentage(@personalities, 'openness') %>%">
-        <%= "#{trait_percentage(@personalities, 'conscientiousness')}% Liberal" %>
+        <%= "#{trait_percentage(@personalities, 'openness')}% Liberal" %>
         <span class="sr-only"><%= @personalities.openness %></span>
       </div>
       <div class="progress-bar" role="progressbar" aria-valuenow="<%= @personalities.openness %>" aria-valuemin="0" aria-valuemax="100" style="background-color: #63a0d4; width: <%= trait_percentage(@personalities, 'openness', true) %>%">
-        <%= "#{trait_percentage(@personalities, 'conscientiousness', true)}% Conservador" %>
+        <%= "#{trait_percentage(@personalities, 'openness', true)}% Conservador" %>
         <span class="sr-only"><%= @personalities.openness %></span>
       </div>
     </div>
