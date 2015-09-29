@@ -1,4 +1,7 @@
 class User < ActiveRecord::Base
+  has_many :posts
+  has_one :user_personality
+
   def self.from_omniauth(auth)
     where(facebook_id: auth['uid']).first_or_initialize.tap do |user|
       user.link       = auth['extra']['raw_info']['link'],
