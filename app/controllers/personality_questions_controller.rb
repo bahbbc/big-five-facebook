@@ -1,9 +1,9 @@
 class PersonalityQuestionsController < ApplicationController
   def new
-    if posts?
-      @personality_questions = PersonalityQuestion.new
-    elsif UserPersonality.already_anwered?(current_user)
+    if UserPersonality.already_anwered?(current_user)
       redirect_to :personality_questions
+    elsif posts?
+      @personality_questions = PersonalityQuestion.new
     else
       redirect_to :missing_permission
     end
