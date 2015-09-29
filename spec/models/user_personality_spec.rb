@@ -1,7 +1,7 @@
 require 'rails_helper'
 
 RSpec.describe UserPersonality, type: :model do
-  describe '#already_anwered?' do
+  describe '.already_anwered?' do
     subject(:user_personality) { described_class.already_anwered?(current_user) }
 
     context 'an user with personality_questions' do
