@@ -1,4 +1,0 @@
-require 'dropbox_sdk'
-
-APP_KEY = ENV['DROPBOX_APP_KEY']
-APP_SECRET = ENV['DROPBOX_APP_SECRET']

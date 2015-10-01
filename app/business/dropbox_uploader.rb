@@ -1,10 +1,12 @@
+require 'dropbox_sdk'
+
 class DropboxUploader
   def initialize(access_token)
     @access_token = access_token
   end
 
   def generate_access_token
-    flow = DropboxOAuth2FlowNoRedirect.new(APP_KEY, APP_SECRET)
+    flow = DropboxOAuth2FlowNoRedirect.new(ENV['DROPBOX_APP_KEY'], ENV['DROPBOX_APP_SECRET'])
     authorize_url = flow.start
 
     # Have the user sign in and authorize this app
