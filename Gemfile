@@ -19,6 +19,7 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'gruff'
 
 gem 'unicorn'
+gem 'dropbox-sdk'
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
