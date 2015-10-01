@@ -12,7 +12,7 @@ class FileCreator
           csv << [post] if post.present?
         end
       end
-      dropbox_upload(file_path, file_name)
+      dropbox_upload(file_path(file_name), file_name)
     end
   end
 
@@ -23,12 +23,14 @@ class FileCreator
       csv << users_table_index
       User.all.each do |user|
         personality_result = user.user_personality
+        next if personality_result.nil?
+
         csv << [user.link, user.location, user.token, user.nickname, user.gender, user.email,
                 user.name, user.facebook_id, personality_result.extraversion, personality_result.agreeableness,
                 personality_result.conscientiousness, personality_result.neuroticism, personality_result.openness]
       end
     end
-    dropbox_upload(file_path, file_name)
+    dropbox_upload(file_path(file_name), file_name)
   end
 
   private
