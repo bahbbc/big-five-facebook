@@ -1,4 +1,4 @@
-class FileNormalizer
+module FileNormalizer
   def normalize_posts
     Post.all.each do |data|
       CSV.open("#{Rails.root}/tmp/posts---#{data.user_id}") do |csv|
