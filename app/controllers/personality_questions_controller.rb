@@ -12,6 +12,7 @@ class PersonalityQuestionsController < ApplicationController
   def create
     @personality_questions = PersonalityQuestion.new(personality_questions_params)
     if @personality_questions.save
+      @personality_questions.update_attributes(user_id: current_user)
       RetrievePostsWorker.perform_async(current_user.id)
       user_personality.create_score(
         PersonalityCalculator.new(@personality_questions).calculate
