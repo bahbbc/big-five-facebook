@@ -2,7 +2,7 @@ require 'csv'
 
 class FileCreator
   def normalize_posts
-    Post.all.each do |data|
+    Post.not_migrated.each do |data|
       file_name = "#{Time.zone.now}-User-#{data.user_id}.csv"
 
       CSV.open(file_path(file_name), 'w') do |csv|
@@ -13,6 +13,7 @@ class FileCreator
         end
       end
       dropbox_upload(file_path(file_name), file_name)
+      data.migrate
     end
   end
 
