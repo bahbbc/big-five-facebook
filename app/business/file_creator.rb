@@ -13,7 +13,7 @@ class FileCreator
         end
       end
       dropbox_upload(file_path(file_name), file_name)
-      data.migrate
+      data.update_attributes(imported: true)
     end
   end
 
