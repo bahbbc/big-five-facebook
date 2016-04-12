@@ -17,6 +17,19 @@ class FileCreator
     end
   end
 
+  def user_name_and_class
+    file_name = "#{Time.zone.now}-ClassUsers.csv"
+    CSV.open(file_path(file_name), 'w') do |csv|
+      csv << %w(nome extraversion agreeableness conscientiousness neuroticism openness)
+      User.all.each do |user|
+        personality_result = user.user_personality
+        csv << [user.nickname, personality_result.extraversion, personality_result.agreeableness,
+                personality_result.conscientiousness, personality_result.neuroticism, personality_result.openness]
+      end
+    end
+    dropbox_upload(file_path(file_name), file_name)
+  end
+
   def user_and_class_data
     file_name = "#{Time.zone.now}-TotalUsers.csv"
 
