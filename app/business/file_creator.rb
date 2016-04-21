@@ -82,7 +82,6 @@ class FileCreator
                   question.thirty_six_friendly, question.thirty_seven_rude, question.thirty_eight_planner,
                   question.thirty_nine_easily_nervous, question.fourty_like_think, question.fourty_one_low_artistic,
                   question.fourty_two_cooperative, question.fourty_three_distractive, question.fourty_four_sofisticated]
-        end
       end
     end
     dropbox_upload(file_path(file_name), file_name)
