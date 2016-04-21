@@ -60,7 +60,7 @@ class FileCreator
     file_name = "#{Time.zone.now}-TotalUsers.csv"
 
     CSV.open(file_path(file_name), 'w') do |csv|
-      csv << users_table_minor
+      csv << users_table_index
       User.all.each do |user|
         personality_result = user.user_personality
         question = user.personality_question
