@@ -20,11 +20,11 @@ class FileCreator
   def user_name_and_class
     file_name = "#{Time.zone.now}-ClassUsers.csv"
     CSV.open(file_path(file_name), 'w') do |csv|
-      csv << %w(nome extraversion agreeableness conscientiousness neuroticism openness)
+      csv << %w(id nome extraversion agreeableness conscientiousness neuroticism openness)
       User.all.each do |user|
         personality_result = user.user_personality
         next if personality_result.nil?
-        csv << [user.nickname, personality_result.extraversion, personality_result.agreeableness,
+        csv << [user.id, user.nickname, personality_result.extraversion, personality_result.agreeableness,
                 personality_result.conscientiousness, personality_result.neuroticism, personality_result.openness]
       end
     end
