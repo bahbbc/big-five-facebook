@@ -63,9 +63,8 @@ class FileCreator
       csv << users_table_minor
       User.all.each do |user|
         personality_result = user.user_personality
+        question = user.personality_question
         next if personality_result.nil?
-        PersonalityQuestion.all.each do |question|
-          next if question.created_at.to_s != personality_result.created_at.to_s
           csv << [user.id, user.location, user.token, user.nickname, user.gender, user.email,
                   user.name, user.facebook_id, personality_result.extraversion, personality_result.agreeableness,
                   personality_result.conscientiousness, personality_result.neuroticism, personality_result.openness,
