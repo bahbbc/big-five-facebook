@@ -1,4 +1,6 @@
 class PersonalityQuestion < ActiveRecord::Base
+  belongs_to :user
+
   validates :one_speaker, :two_show_defects, :three_exaustive_work, :four_sad, :five_original,
             :six_quiet, :seven_prestative, :eight_careless, :nine_stressless, :ten_curiosity,
             :eleven_energy, :twelve_fighter, :thirteen_confidence_worker, :fourteen_tense, :fifteen_thinker,
