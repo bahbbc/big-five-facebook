@@ -64,7 +64,7 @@ class FileCreator
       User.all.each do |user|
         personality_result = user.user_personality
         question = user.personality_question
-        next if personality_result.nil?
+        next if personality_result.nil? || question.nil?
           csv << [user.id, user.location, user.token, user.nickname, user.gender, user.email,
                   user.name, user.facebook_id, personality_result.extraversion, personality_result.agreeableness,
                   personality_result.conscientiousness, personality_result.neuroticism, personality_result.openness,
