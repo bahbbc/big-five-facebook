@@ -89,8 +89,9 @@ class FileCreator
 
   private
 
-  def questions_table
-    %w(question_id question_created_at one_speaker two_show_defects three_exaustive_work four_sad five_original
+  def users_table_index
+     %w(id nickname gender name extraversion agreeableness conscientiousness
+       neuroticism openness one_speaker two_show_defects three_exaustive_work four_sad five_original
        six_quiet seven_prestative eight_careless nine_stressless ten_curiosity eleven_energy twelve_fighter
        thirteen_confidence_worker fourteen_tense fifteen_thinker sixteen_enthusiastic seventeen_forgive
        eighteen_unorganized ninteen_concerned twenty_imaginative twenty_one_calm twenty_two_others_trust
@@ -101,9 +102,8 @@ class FileCreator
        fourty_one_low_artistic fourty_two_cooperative fourty_three_distractive fourty_four_sofisticated)
   end
 
-  def users_table_index
-     %w(id location nickname gender name extraversion agreeableness conscientiousness
-       neuroticism openness one_speaker two_show_defects three_exaustive_work four_sad five_original
+  def questions_table
+    %w(question_id question_created_at one_speaker two_show_defects three_exaustive_work four_sad five_original
        six_quiet seven_prestative eight_careless nine_stressless ten_curiosity eleven_energy twelve_fighter
        thirteen_confidence_worker fourteen_tense fifteen_thinker sixteen_enthusiastic seventeen_forgive
        eighteen_unorganized ninteen_concerned twenty_imaginative twenty_one_calm twenty_two_others_trust
