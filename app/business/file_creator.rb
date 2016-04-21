@@ -42,7 +42,7 @@ class FileCreator
         PersonalityQuestion.all.each do |question|
           csv << [user.id, personality_result.extraversion, personality_result.agreeableness,
                   personality_result.conscientiousness, personality_result.neuroticism, personality_result.openness,
-                  user.link, personality_result.created_at, question.created_at, question.one_speaker, question.two_show_defects,
+                  user.link, personality_result.created_at, question.id ,question.created_at, question.one_speaker, question.two_show_defects,
                   question.three_exaustive_work, question.four_sad, question.five_original, question.six_quiet,
                   question.seven_prestative, question.eight_careless, question.nine_stressless, question.ten_curiosity,
                   question.eleven_energy, question.twelve_fighter, question.thirteen_confidence_worker, question.fourteen_tense,
@@ -66,7 +66,7 @@ class FileCreator
     file_name = "#{Time.zone.now}-TotalUsers.csv"
 
     CSV.open(file_path(file_name), 'w') do |csv|
-      csv << users_table_index
+      csv << users_table_minor
       User.all.each do |user|
         personality_result = user.user_personality
         next if personality_result.nil?
@@ -96,9 +96,9 @@ class FileCreator
 
   private
 
-  def users_table_index
+  def users_table_minor
     %w(id location token nickname gender email name facebook_id extraversion agreeableness conscientiousness
-       neuroticism openness link created_at created_at one_speaker two_show_defects three_exaustive_work four_sad five_original
+       neuroticism openness link personality_created_at question_id question_created_at one_speaker two_show_defects three_exaustive_work four_sad five_original
        six_quiet seven_prestative eight_careless nine_stressless ten_curiosity eleven_energy twelve_fighter
        thirteen_confidence_worker fourteen_tense fifteen_thinker sixteen_enthusiastic seventeen_forgive
        eighteen_unorganized ninteen_concerned twenty_imaginative twenty_one_calm twenty_two_others_trust
