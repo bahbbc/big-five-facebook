@@ -65,10 +65,10 @@ class FileCreator
         personality_result = user.user_personality
         question = user.personality_question
         next if personality_result.nil? || question.nil?
-          csv << [user.id, user.location, user.token, user.nickname, user.gender, user.email,
-                  user.name, user.facebook_id, personality_result.extraversion, personality_result.agreeableness,
+          csv << [user.id, user.nickname, user.gender,
+                  user.name, personality_result.extraversion, personality_result.agreeableness,
                   personality_result.conscientiousness, personality_result.neuroticism, personality_result.openness,
-                  user.link, personality_result.created_at, question.created_at, question.one_speaker, question.two_show_defects,
+                  question.one_speaker, question.two_show_defects,
                   question.three_exaustive_work, question.four_sad, question.five_original, question.six_quiet,
                   question.seven_prestative, question.eight_careless, question.nine_stressless, question.ten_curiosity,
                   question.eleven_energy, question.twelve_fighter, question.thirteen_confidence_worker, question.fourteen_tense,
@@ -102,8 +102,8 @@ class FileCreator
   end
 
   def users_table_index
-    %w(id extraversion agreeableness conscientiousness
-       neuroticism openness link personality_created_at question_created_at one_speaker two_show_defects three_exaustive_work four_sad five_original
+     %w(id location nickname gender name extraversion agreeableness conscientiousness
+       neuroticism openness one_speaker two_show_defects three_exaustive_work four_sad five_original
        six_quiet seven_prestative eight_careless nine_stressless ten_curiosity eleven_energy twelve_fighter
        thirteen_confidence_worker fourteen_tense fifteen_thinker sixteen_enthusiastic seventeen_forgive
        eighteen_unorganized ninteen_concerned twenty_imaginative twenty_one_calm twenty_two_others_trust
