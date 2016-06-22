@@ -1033,6 +1033,47 @@
             <%= 5 %>
           </label>
         </li>
+        <li class="list-group-item col-xs-12 col-md-12">
+          <%= f.label :religiousness, "Qual o seu grau de religiosidade?", class: "col-xs-4 col-md-4"%>
+          <label class="col-xs-1 col-md-1">
+            <%= f.radio_button :religiousness, 1 %>
+            <%= 1 %>
+          </label>
+          <label class="col-xs-1 col-md-1">
+            <%= f.radio_button :religiousness, 2 %>
+            <%= 2 %>
+          </label>
+          <label class="col-xs-1 col-md-1">
+            <%= f.radio_button :religiousness, 3 %>
+            <%= 3 %>
+          </label>
+          <label class="col-xs-1 col-md-1">
+            <%= f.radio_button :religiousness, 4 %>
+            <%= 4 %>
+          </label>
+          <label class="col-xs-1 col-md-1">
+            <%= f.radio_button :religiousness, 5 %>
+            <%= 5 %>
+          </label>
+        </li>
+        <li class="list-group-item col-xs-12 col-md-12">
+          <div class="form-inline">
+            <%= f.input :age, label_html: { class: 'col-xs-4 col-md-4 form-group' },
+                input_html: { class: "col-xs-4 col-md-4 form-control input-sm" } %>
+          </div>
+        </li>
+        <li class="list-group-item col-xs-12 col-md-12">
+          <div class="form-inline">
+            <%= f.input :profession, label_html: { class: 'col-xs-4 col-md-4 form-group' },
+                input_html: { class: "col-xs-4 col-md-4 form-control input-sm" } %>
+          </div>
+        </li>
+        <li class="list-group-item col-xs-12 col-md-12">
+          <div class="form-inline">
+            <%= f.input :usp, as: :select, collection: ['Sim','Não'], label_html: { class: 'col-xs-4 col-md-4 form-group' },
+            input_html: {class: 'col-xs-4 col-md-4 form-control'} %>
+          </div>
+        </li>
       </ul>
     </div>
     <div class="form-group container-fluid">
