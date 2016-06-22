@@ -1,5 +1,7 @@
 ---
 pt-BR:
+  yes: Sim
+  no: Não
   date:
     abbr_day_names:
     - Dom
@@ -143,6 +145,10 @@ pt-BR:
         fourty_two_cooperative: Pergunta 42
         fourty_three_distractive: Pergunta 43
         fourty_four_sofisticated: Pergunta 44
+        religiousness: Qual o seu grau de religiosidade?
+        age: Qual a sua idade?
+        profession: Qual a sua profissão e/ou área de formação?
+        usp: Estuda/estudou na USP?
   errors:
     format: "%{attribute} %{message}"
     messages:
