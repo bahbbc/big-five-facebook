@@ -1070,7 +1070,7 @@
         </li>
         <li class="list-group-item col-xs-12 col-md-12">
           <div class="form-inline">
-            <%= f.input :usp, as: :select, collection: ['Sim','Não'], label_html: { class: 'col-xs-4 col-md-4 form-group' },
+            <%= f.input :usp, as: :select, collection: [['Sim', true],['Não', false]], label_html: { class: 'col-xs-4 col-md-4 form-group' },
             input_html: {class: 'col-xs-4 col-md-4 form-control'} %>
           </div>
         </li>
