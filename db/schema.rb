@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160424160023) do
+ActiveRecord::Schema.define(version: 20160621020519) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -61,9 +61,13 @@ ActiveRecord::Schema.define(version: 20160424160023) do
     t.integer  "fourty_two_cooperative"
     t.integer  "fourty_three_distractive"
     t.integer  "fourty_four_sofisticated"
-    t.datetime "created_at",                 null: false
-    t.datetime "updated_at",                 null: false
+    t.datetime "created_at",                                 null: false
+    t.datetime "updated_at",                                 null: false
     t.integer  "user_id"
+    t.integer  "religiousness"
+    t.integer  "age"
+    t.string   "profession"
+    t.boolean  "usp",                        default: false
   end
 
   add_index "personality_questions", ["user_id"], name: "index_personality_questions_on_user_id", using: :btree

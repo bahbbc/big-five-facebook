@@ -38,7 +38,7 @@ class PersonalityQuestionsController < ApplicationController
               :thirty_one_shy, :thirty_two_good, :thirty_three_eficient, :thirty_four_calm_in_tense, :thirty_five_routine,
               :thirty_six_friendly, :thirty_seven_rude, :thirty_eight_planner, :thirty_nine_easily_nervous,
               :fourty_like_think, :fourty_one_low_artistic, :fourty_two_cooperative, :fourty_three_distractive,
-              :fourty_four_sofisticated)
+              :fourty_four_sofisticated, :religiousness, :age, :profession, :usp)
   end
 
   private
