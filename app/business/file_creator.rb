@@ -81,7 +81,8 @@ class FileCreator
                   question.thirty_three_eficient, question.thirty_four_calm_in_tense, question.thirty_five_routine,
                   question.thirty_six_friendly, question.thirty_seven_rude, question.thirty_eight_planner,
                   question.thirty_nine_easily_nervous, question.fourty_like_think, question.fourty_one_low_artistic,
-                  question.fourty_two_cooperative, question.fourty_three_distractive, question.fourty_four_sofisticated]
+                  question.fourty_two_cooperative, question.fourty_three_distractive, question.fourty_four_sofisticated,
+                  question.religiousness, question.age, question.profession]
       end
     end
     dropbox_upload(file_path(file_name), file_name)
