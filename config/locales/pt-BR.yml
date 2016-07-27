@@ -147,7 +147,7 @@ pt-BR:
         fourty_four_sofisticated: Pergunta 44
         religiousness: Qual o seu grau de religiosidade?
         age: Qual a sua idade?
-        profession: Você tem formação ou trabalha na área de TI?
+        profession: 'Você tem formação ou trabalha na área de TI? Senão, qual a sua área?'
         usp: Estuda/estudou na USP?
   errors:
     format: "%{attribute} %{message}"
