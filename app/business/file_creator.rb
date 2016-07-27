@@ -82,7 +82,7 @@ class FileCreator
                   question.thirty_six_friendly, question.thirty_seven_rude, question.thirty_eight_planner,
                   question.thirty_nine_easily_nervous, question.fourty_like_think, question.fourty_one_low_artistic,
                   question.fourty_two_cooperative, question.fourty_three_distractive, question.fourty_four_sofisticated,
-                  question.religiousness, question.age, question.profession]
+                  question.religiousness, question.age, question.usp, question.profession]
       end
     end
     dropbox_upload(file_path(file_name), file_name)
@@ -101,7 +101,7 @@ class FileCreator
        thirty_three_eficient thirty_four_calm_in_tense thirty_five_routine thirty_six_friendly
        thirty_seven_rude thirty_eight_planner thirty_nine_easily_nervous fourty_like_think
        fourty_one_low_artistic fourty_two_cooperative fourty_three_distractive fourty_four_sofisticated religiousness
-       age profession)
+       age usp profession)
   end
 
   def questions_table
